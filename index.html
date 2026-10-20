@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joel Antonio Trejo-Sánchez | CIMAT Mérida</title>
+<meta name="description" content="Página de Joel Antonio Trejo-Sánchez, investigador del CIMAT Unidad Mérida. Algoritmos en grafos, optimización combinatoria y sistemas multi-agente.">
+<meta name="theme-color" content="#EDF1EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1B2D" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Joel Antonio Trejo-Sánchez">
+<meta property="og:description" content="Algoritmos en grafos, optimización combinatoria y sistemas multi-agente. CIMAT Unidad Mérida.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213D'/%3E%3Cpath d='M8 22 15 10 24 20M15 10 22 8' stroke='%235CCBCB' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='8' cy='22' r='3' fill='%23E3A93A'/%3E%3Ccircle cx='15' cy='10' r='3' fill='%235CCBCB'/%3E%3Ccircle cx='24' cy='20' r='3' fill='%235CCBCB'/%3E%3Ccircle cx='22' cy='8' r='3' fill='%235CCBCB'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Joel Antonio Trejo-Sánchez","jobTitle":"Investigador por México","affiliation":{"@type":"Organization","name":"Centro de Investigación en Matemáticas (CIMAT), Unidad Mérida"},"email":"mailto:joel.trejo@cimat.mx","knowsAbout":["Algoritmos en grafos","Optimización combinatoria","Sistemas multi-agente","Cómputo de alto rendimiento"]}
+</script>
+<style>
+:root{
+  --bg:#EDF1EE; --surface:#F7F9F7; --ink:#14213D; --muted:#46556D; --line:#C6D1CB;
+  --teal:#0B7A7E; --teal-ink:#086468; --on-teal:#FFFFFF; --ochre:#E3A93A;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0F1B2D;--surface:#162841;--ink:#E8EEF2;--muted:#A9B7C8;--line:#2B3D58;
+        --teal:#5CCBCB;--teal-ink:#7DDADA;--on-teal:#0F1B2D;--ochre:#E8B75A;}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.7 var(--serif)}
+a{color:var(--teal-ink);text-underline-offset:.2em}
+a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:3px}
+.wrap{max-width:76rem;margin:0 auto;padding:0 1.25rem}
+@media (min-width:44rem){.wrap{padding:0 2.5rem}}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--bg);padding:.6rem 1rem;z-index:20}
+.skip:focus{left:1rem;top:1rem}
+
+/* barra superior */
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);
+     -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:.5rem 1.5rem;flex-wrap:wrap;padding-top:.5rem;padding-bottom:.5rem}
+.brand{font:700 1.05rem/1 var(--sans);color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.top ul{display:flex;gap:.25rem 1.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap;font:500 .95rem/1.4 var(--sans)}
+.top li a{color:var(--muted);text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent}
+.top li a:hover{color:var(--ink);border-bottom-color:var(--teal)}
+
+/* portada */
+.hero{padding:3.5rem 0 4.5rem}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+@media (min-width:62rem){.hero .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:3rem}}
+h1{font:700 clamp(2.5rem,6.4vw,5rem)/.95 var(--sans);letter-spacing:-.025em;margin:0 0 1.75rem;
+   font-variation-settings:"wdth" 80,"opsz" 96}
+h1 span{display:block;white-space:nowrap}
+.lede{font-size:1.3rem;line-height:1.5;max-width:35rem;margin:0 0 1rem}
+.role{color:var(--muted);max-width:35rem;margin:0 0 2rem}
+.actions{display:flex;flex-wrap:wrap;gap:1rem 1.75rem;align-items:center}
+.btn{display:inline-block;font:600 1rem/1 var(--sans);padding:.95rem 1.5rem;border-radius:999px;
+     background:var(--teal);color:var(--on-teal);text-decoration:none}
+.btn:hover{background:var(--teal-ink)}
+.link{font:600 1rem/1.2 var(--sans);color:var(--ink);text-decoration:underline;
+      text-decoration-color:var(--teal);text-decoration-thickness:2px}
+.graph{margin:0}
+.graph svg{display:block;width:100%;height:auto}
+.graph figcaption{display:flex;justify-content:space-between;align-items:center;gap:1rem;
+                  margin-top:.75rem;font-size:.9rem;color:var(--muted)}
+.graph button{font:500 .9rem/1 var(--sans);background:none;color:var(--ink);border:1px solid var(--line);
+              border-radius:999px;padding:.5rem 1rem;cursor:pointer}
+.graph button:hover{border-color:var(--teal)}
+.e-cand{stroke:var(--line);stroke-width:1}
+.e-tree{stroke:var(--teal);stroke-width:2.75;stroke-linecap:round;fill:none}
+.n{fill:var(--bg);stroke:var(--muted);stroke-width:1.5}
+.n.in{fill:var(--teal);stroke:var(--teal)}
+.n.root{fill:var(--ochre);stroke:var(--ochre)}
+@media (prefers-reduced-motion:reduce){.graph button{display:none}}
+
+/* secciones */
+.sec{padding:4.5rem 0;border-top:1px solid var(--line)}
+.sec>.wrap{display:grid;gap:1.75rem 3rem}
+@media (min-width:62rem){
+  .sec>.wrap{grid-template-columns:minmax(0,3fr) minmax(0,9fr);align-items:start}
+  .sec h2{position:sticky;top:5rem}
+}
+h2{font:700 clamp(1.9rem,3.6vw,2.6rem)/1.05 var(--sans);letter-spacing:-.02em;margin:0;
+   font-variation-settings:"wdth" 88,"opsz" 48}
+h3{font:650 1.3rem/1.25 var(--sans);letter-spacing:-.01em;margin:0 0 .5rem}
+.sec p{margin:0 0 1rem;max-width:44rem}
+.sub{font:650 1.15rem/1.2 var(--sans);margin:3.25rem 0 .75rem}
+.sub:first-child{margin-top:0}
+
+/* áreas */
+.area{padding:1.5rem 0;border-top:1px solid var(--line)}
+.area:first-child{border-top:0;padding-top:0}
+.area p{margin-bottom:0}
+
+/* resultados */
+.res{display:grid;gap:1rem 2.5rem;padding:2rem 0;border-top:1px solid var(--line)}
+.res:first-child{border-top:0;padding-top:0}
+@media (min-width:48rem){.res{grid-template-columns:15rem minmax(0,1fr)}}
+.fig{font:700 clamp(2.2rem,4.6vw,3.2rem)/1 var(--sans);color:var(--teal-ink);letter-spacing:-.02em;
+     font-variation-settings:"wdth" 85,"opsz" 72}
+.fig small{display:block;font:400 .9rem/1.4 var(--serif);color:var(--muted);letter-spacing:0;margin-top:.6rem;
+           font-variation-settings:normal}
+.res .meta{color:var(--muted);font-size:.95rem;margin:0 0 .6rem}
+.res p:last-child{margin-bottom:0}
+
+/* proyectos */
+.feature{display:grid;gap:1.5rem 2.5rem;margin:0 0 3.5rem}
+@media (min-width:66rem){
+  .feature{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center}
+  .feature.flip .media{order:2}
+}
+.media{margin:0}
+.media img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--line);background:#f1f1f1}
+.media img.dim{filter:brightness(1.45) contrast(1.05)}
+.media figcaption{font-size:.88rem;color:var(--muted);margin-top:.6rem}
+.feature h3{font-size:1.5rem}
+
+/* listas con año */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:6.25rem minmax(0,1fr);gap:.25rem 1rem;padding:.95rem 0;border-top:1px solid var(--line)}
+.tl li:first-child{border-top:0}
+.tl li[hidden]{display:none}
+.yr{font:600 .95rem/1.7 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
+.pub-title{display:block;font-weight:600;line-height:1.4}
+.pub-auth{display:block;font-size:.95rem;color:var(--muted);margin-top:.15rem}
+.pub-auth strong{color:var(--ink);font-weight:600}
+.pub-ven{display:block;font-size:.95rem;margin-top:.15rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.25rem}
+.chip{font:500 .92rem/1 var(--sans);border:1px solid var(--line);background:transparent;color:var(--ink);
+      border-radius:999px;padding:.55rem 1rem;cursor:pointer}
+.chip:hover{border-color:var(--teal)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chips:not(.on){display:none}
+
+/* contacto */
+.mail{display:inline-block;font:650 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sans);letter-spacing:-.01em;
+      color:var(--ink);text-decoration-color:var(--teal);text-decoration-thickness:3px;word-break:break-word}
+.tools{display:grid;gap:.35rem 2rem;margin:1.5rem 0 0;max-width:44rem}
+@media (min-width:44rem){.tools{grid-template-columns:9rem minmax(0,1fr)}}
+.tools dt{font:600 .95rem/1.7 var(--sans);color:var(--muted)}
+.tools dd{margin:0}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.92rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<nav class="top" aria-label="Secciones">
+  <div class="wrap">
+    <a class="brand" href="#inicio">J. A. Trejo-Sánchez</a>
+    <ul>
+      <li><a href="#investigacion">Investigación</a></li>
+      <li><a href="#resultados">Resultados</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#publicaciones">Publicaciones</a></li>
+      <li><a href="#docencia">Docencia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="contenido">
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <h1><span>Joel Antonio</span><span>Trejo-Sánchez</span></h1>
+      <p class="lede">Diseño algoritmos para problemas de optimización en grafos, programación de tareas y sistemas multi-agente.</p>
+      <p class="role">Investigador por México en el Centro de Investigación en Matemáticas (CIMAT), Unidad Mérida. Miembro del Sistema Nacional de Investigadoras e Investigadores, nivel 1.</p>
+      <div class="actions">
+        <a class="btn" href="#publicaciones">Ver publicaciones</a>
+        <a class="link" href="mailto:joel.trejo@cimat.mx">Escribirme</a>
+      </div>
+    </div>
+    <figure class="graph">
+      <svg id="grafo" viewBox="0 0 520 460" role="img"
+           aria-label="Grafo con puntos conectados por un árbol de expansión mínima que se dibuja arista por arista con el algoritmo de Prim."></svg>
+      <figcaption>
+        <span id="grafo-estado" aria-hidden="true">Algoritmo de Prim: árbol de expansión mínima</span>
+        <button type="button" id="grafo-repetir">Repetir</button>
+      </figcaption>
+    </figure>
+  </div>
+</header>
+
+<section class="sec" id="investigacion" aria-labelledby="h-inv">
+  <div class="wrap">
+    <h2 id="h-inv">Investigación</h2>
+    <div>
+      <div class="area">
+        <h3>Algoritmos en grafos</h3>
+        <p>Diseño algoritmos exactos, de aproximación y distribuidos sobre familias de grafos como árboles, cactus, grafos planos y de Halin. He trabajado en conjuntos independientes fuertes, <i lang="en">2-packing</i>, <i lang="en">s-club</i>, cubiertas de concentradores y <i lang="en">graph burning</i>. Mi tesis de doctorado, dirigida por José Alberto Fernández Zepeda en el CICESE, trató los algoritmos distribuidos para el conjunto independiente fuerte.</p>
+      </div>
+      <div class="area">
+        <h3>Optimización combinatoria</h3>
+        <p>Aplico técnicas de investigación de operaciones, heurísticas, metaheurísticas y programación entera a problemas de programación de tareas (<i lang="en">flowshop</i>), ruteo de vehículos, asignación de camas hospitalarias y cobertura de emergencias. Me interesan tanto las cotas teóricas como los algoritmos que funcionan en instancias reales.</p>
+      </div>
+      <div class="area">
+        <h3>Sistemas multi-agente y cómputo de alto rendimiento</h3>
+        <p>Construyo simuladores y herramientas basadas en agentes para tráfico urbano, planificación y sistemas hospitalarios. Programo en GPU con CUDA y en paralelo con OpenMP y MPI para acelerar algoritmos y simulaciones.</p>
+      </div>
+      <div class="area">
+        <h3>Formación</h3>
+        <p>Doctorado en Ciencias de la Computación, CICESE (2014). Maestría en Ciencias en Ingeniería Eléctrica, CINVESTAV Guadalajara (2007), con una tesis sobre control de tráfico urbano con sistemas multi-agente. Licenciatura en Ciencias de la Computación, Universidad Autónoma de Yucatán (2003).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="resultados" aria-labelledby="h-res">
+  <div class="wrap">
+    <h2 id="h-res">Resultados recientes</h2>
+    <div>
+      <article class="res">
+        <div class="fig">112 de 120<small>instancias de Taillard con cotas mejoradas, y 430 de 480 en VRF</small></div>
+        <div>
+          <h3>Cotas para el <i lang="en">flowshop</i> de permutación</h3>
+          <p class="meta">Alejandro-Soto, Segura y Trejo-Sánchez. <i lang="en">Computers &amp; Operations Research</i>, 2026.</p>
+          <p>Partimos de una formulación matricial del problema para obtener una cota superior y un marco general de cotas inferiores, basado en un problema de mínimo-máximo sobre conjuntos de caminos. En el preprint, las nuevas cotas mejoran las conocidas en 112 de las 120 instancias de Taillard y en 430 de las 480 de VRF. También aportamos resultados asintóticos sobre una conjetura de Taillard.</p>
+          <p><a href="https://arxiv.org/abs/2509.23512">Leer el preprint en arXiv</a></p>
+        </div>
+      </article>
+      <article class="res">
+        <div class="fig">O(<i>s</i>·<i>n</i>)<small>tiempo para hallar un <i lang="en">s-club</i> máximo en un árbol</small></div>
+        <div>
+          <h3>Un <i lang="en">s-club</i> máximo en árboles</h3>
+          <p class="meta">Fernández-Zepeda, Flores-Lamas, Hague y Trejo-Sánchez. <i lang="en">European Journal of Operational Research</i>, 2025.</p>
+          <p>Un <i lang="en">s-club</i> es un conjunto de vértices cuyo subgrafo inducido tiene diámetro máximo <i>s</i>; con <i>s</i> = 1 se obtiene una clique. El problema es NP-difícil en grafos arbitrarios. Proponemos un algoritmo de programación dinámica que lo resuelve en árboles en tiempo O(<i>s</i>·<i>n</i>) y que supera a los algoritmos previos para árboles en teoría y en experimentos.</p>
+          <p><a href="https://pure.royalholloway.ac.uk/en/publications/a-dynamic-programming-algorithm-for-the-maximum-s-club-problem-on/">Ver el resumen en Royal Holloway</a></p>
+        </div>
+      </article>
+      <article class="res">
+        <div class="fig">102 400<small>vértices en los grafos más grandes de las pruebas</small></div>
+        <div>
+          <h3>Una heurística voraz para <i lang="en">graph burning</i></h3>
+          <p class="meta">García-Díaz, Cornejo-Acosta y Trejo-Sánchez. <i lang="en">Computing</i>, 2025.</p>
+          <p>El número de <i lang="en">burning</i> mide qué tan vulnerable es un grafo ante un contagio. Analizamos una heurística determinista que corre en tiempo O(<i>mn</i> + <i>pn</i>²) y que se apoya en una conexión con el problema de cobertura máxima por grupos. En grafos de referencia y sintéticos de hasta 102 400 vértices encontró la mayoría de las soluciones óptimas y mejores conocidas.</p>
+          <p><a href="https://arxiv.org/abs/2401.07577">Leer el preprint en arXiv</a></p>
+        </div>
+      </article>
+      <article class="res">
+        <div class="fig">2<small>herramientas de software publicadas en <i lang="en">Software Impacts</i></small></div>
+        <div>
+          <h3>Herramientas multi-agente de código reutilizable</h3>
+          <p class="meta">Trejo-Sánchez et al. y Sansores, Trejo-Sánchez y Negrón. <i lang="en">Software Impacts</i>, 2025.</p>
+          <p><i lang="en">MaSchedule</i> es una herramienta multi-agente para problemas de programación de tareas. La segunda es un marco de simulación multi-agente con búsqueda espacial de vecindarios optimizada, que nació del modelo BioMASS (<i lang="en">IEEE Access</i>, 2020).</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="proyectos" aria-labelledby="h-pro">
+  <div class="wrap">
+    <h2 id="h-pro">Proyectos</h2>
+    <div>
+      <article class="feature">
+        <figure class="media">
+          <img class="dim" src="img/pizarra-vrp.png" width="694" height="710" loading="lazy"
+               alt="Pizarra con el planteamiento de un problema de ruteo de vehículos con restricciones de tiempo: un conjunto de destinos, cada uno con su ubicación y su ventana de horario.">
+          <figcaption>Planteamiento en pizarra: cada destino lleva una ubicación y un horario en que puede visitarse.</figcaption>
+        </figure>
+        <div>
+          <h3>Rutas para pequeños comerciantes durante la pandemia</h3>
+          <p>En 2020 participé en las iniciativas solidarias frente a la COVID-19 con el proyecto «Diseño de rutas para pequeños comerciantes durante la pandemia COVID-19».</p>
+          <p>El problema es un ruteo de vehículos con restricciones de tiempo: hay que recorrer un conjunto de destinos, cada uno con su ubicación y su ventana de horario, y armar rutas que respeten todas las ventanas.</p>
+        </div>
+      </article>
+
+      <article class="feature flip">
+        <figure class="media">
+          <img src="img/hospital-multiagente.png" width="1632" height="1077" loading="lazy"
+               alt="Diagrama del simulador multi-agente hospitalario: un agente paciente envía una solicitud al agente hospital, que consulta a los agentes cama, mientras avanza el tiempo de simulación.">
+          <figcaption>Un paciente solicita cama al agente hospital, que consulta a los agentes cama a lo largo del tiempo de simulación.</figcaption>
+        </figure>
+        <div>
+          <h3>Asignación de camas y recursos hospitalarios</h3>
+          <p>En 2025 trabajé en un algoritmo para asignar recursos hospitalarios, en particular las camas de un hospital.</p>
+          <p>El modelo usa agentes: los pacientes llegan a lo largo del tiempo de simulación y piden una cama al agente hospital, que consulta a los agentes cama para decidir la asignación. Sobre ese entorno se comparan heurísticas y metaheurísticas. Este trabajo se relaciona con la tesis de maestría de Eder Renato Delgado Ávila, que codirigí en el CIMAT (2025).</p>
+        </div>
+      </article>
+
+      <h3 class="sub">Otros proyectos</h3>
+      <ol class="tl">
+<li><span class="yr">2026</span><div><span class="pub-title">Cobertura de emergencias viales en Aguascalientes</span><span class="pub-auth">Modelo de predicción espaciotemporal y optimización de la cobertura para gestionar recursos de emergencia vial. Presentado en ENOAN 2026 con B. M. Castañeda Ramos y J. Velasco.</span></div></li>
+<li><span class="yr">2025</span><div><span class="pub-title">Programación integrada en la extrusión de perfiles de aluminio</span><span class="pub-auth">Algoritmo genético para un problema de programación integrada en un caso de estudio industrial, desarrollado como tesis de maestría.</span></div></li>
+<li><span class="yr">2025</span><div><span class="pub-title">Escuela de algoritmos para optimización combinatoria</span><span class="pub-auth">Escuela para estudiantes de licenciatura, apoyada por la convocatoria interna de proyectos de investigación del CIMAT.</span></div></li>
+<li><span class="yr">2020–2021</span><div><span class="pub-title">Control de tráfico para vehículos de prioridad</span><span class="pub-auth">Sistema multi-agente probado en el simulador SUMO, presentado en COMIA 2020 y desarrollado como tesis de licenciatura.</span></div></li>
+<li><span class="yr">2020</span><div><span class="pub-title">Conjunto independiente fuerte en gráficas planas</span><span class="pub-auth">Proyecto de ciencia de frontera del CONACYT (convocatoria 2019), a cargo de la responsabilidad técnica.</span></div></li>
+<li><span class="yr">2017–2018</span><div><span class="pub-title">Servicios de alto desempeño en un clúster de GPU</span><span class="pub-auth">Arquitectura multi-agente para planificar servicios en un clúster con tarjetas gráficas.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="publicaciones" aria-labelledby="h-pub">
+  <div class="wrap">
+    <h2 id="h-pub">Publicaciones</h2>
+    <div>
+      <h3 class="sub">Artículos en revistas (33)</h3>
+      <div class="chips" id="filtros" role="group" aria-label="Filtrar artículos por periodo">
+        <button type="button" class="chip" data-f="reciente" aria-pressed="true">2025–2026 (8)</button>
+        <button type="button" class="chip" data-f="2022-2024" aria-pressed="false">2022–2024 (6)</button>
+        <button type="button" class="chip" data-f="2017-2021" aria-pressed="false">2017–2021 (13)</button>
+        <button type="button" class="chip" data-f="antes" aria-pressed="false">2007–2016 (6)</button>
+        <button type="button" class="chip" data-f="todas" aria-pressed="false">Todos (33)</button>
+      </div>
+      <ol class="tl" id="lista-revistas">
+<li data-p="reciente"><span class="yr">2026</span><div><span class="pub-title" lang="en">A Hough Transform Algorithm Implementation Using Dynamic Parallelism With CUDA</span><span class="pub-auth">Pomol-Poot A.S., López-Martínez J.L., Madera-Ramírez F.A., <strong>Trejo-Sánchez J.A.</strong>, Moo-Mena F.</span><span class="pub-ven"><i lang="en">Concurrency and Computation: Practice and Experience, 38(8), e70701</i>.</span></div></li>
+<li data-p="reciente"><span class="yr">2026</span><div><span class="pub-title" lang="en">Bounds for the permutation flowshop scheduling problem: New framework and theoretical insights</span><span class="pub-auth">Alejandro-Soto J.A., Segura C., <strong>Trejo-Sánchez J.A.</strong></span><span class="pub-ven"><i lang="en">Computers &amp; Operations Research, 107445</i>. <a href="https://arxiv.org/abs/2509.23512">Preprint en arXiv</a></span></div></li>
+<li data-p="reciente"><span class="yr">2025</span><div><span class="pub-title" lang="en">Wavelet q-extropies of fractal signals</span><span class="pub-auth">Ramírez-Pacheco J.C., <strong>Trejo-Sánchez J.A.</strong>, Rizo-Domínguez L.</span><span class="pub-ven"><i lang="en">Papers in Physics, 17, 170004</i>.</span></div></li>
+<li data-p="reciente"><span class="yr">2025</span><div><span class="pub-title" lang="en">A dynamic programming algorithm for the maximum s-club problem on trees</span><span class="pub-auth">Fernández-Zepeda J.A., Flores-Lamas A., Hague M., <strong>Trejo-Sánchez J.A.</strong></span><span class="pub-ven"><i lang="en">European Journal of Operational Research</i>. <a href="https://pure.royalholloway.ac.uk/en/publications/a-dynamic-programming-algorithm-for-the-maximum-s-club-problem-on/">Resumen en Royal Holloway</a></span></div></li>
+<li data-p="reciente"><span class="yr">2025</span><div><span class="pub-title" lang="en">A greedy heuristic for graph burning</span><span class="pub-auth">García-Díaz J., Cornejo-Acosta J.A., <strong>Trejo-Sánchez J.A.</strong></span><span class="pub-ven"><i lang="en">Computing, 107(3), 91</i>. <a href="https://arxiv.org/abs/2401.07577">Preprint en arXiv</a></span></div></li>
+<li data-p="reciente"><span class="yr">2025</span><div><span class="pub-title" lang="en">A multi-agent system simulation framework with optimized spatial neighborhood search</span><span class="pub-auth">Sansores C.E., <strong>Trejo-Sánchez J.A.</strong>, Negrón M.G.</span><span class="pub-ven"><i lang="en">Software Impacts, 23, 100725</i>.</span></div></li>
+<li data-p="reciente"><span class="yr">2025</span><div><span class="pub-title" lang="en">MaSchedule. A multi-agent tool for scheduling problems</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, Sansores C.E., Hernández-López F.J., Velasco J., Fajardo-Delgado D., López-Martínez J.L., Ramírez-Pacheco J.C.</span><span class="pub-ven"><i lang="en">Software Impacts, 23, 100726</i>.</span></div></li>
+<li data-p="reciente"><span class="yr">2025</span><div><span class="pub-title" lang="en">The shifted wavelet (q, q0)-entropy and the classification of stationary fractal signals</span><span class="pub-auth">Ramírez-Pacheco J.C., <strong>Trejo-Sánchez J.A.</strong>, Rizo-Domínguez L.</span><span class="pub-ven"><i lang="en">NHM, 20(1), 89–103</i>.</span></div></li>
+<li data-p="2022-2024"><span class="yr">2024</span><div><span class="pub-title" lang="en">Implementation and evaluation of two parallel computational models for the simulation of a long haul DWDM system limited by FWM</span><span class="pub-auth">Sánchez-Lara R., López-Martínez J.L., <strong>Trejo-Sánchez J.A.</strong>, Offerhaus H.L., Álvarez-Chávez J.A.</span><span class="pub-ven"><i lang="en">Concurrency and Computation: Practice and Experience</i>.</span></div></li>
+<li data-p="2022-2024"><span class="yr">2023</span><div><span class="pub-title" lang="en">Crossing edge minimization in radial outerplanar layered graphs using segment paths</span><span class="pub-auth">Madera-Ramírez F., <strong>Trejo-Sánchez J.A.</strong>, López-Martínez J.L., Ríos-Martínez J.</span><span class="pub-ven"><i lang="en">Optimization Methods and Software</i>.</span></div></li>
+<li data-p="2022-2024"><span class="yr">2023</span><div><span class="pub-title" lang="en">A fast approximation algorithm for the maximum 2-packing set problem on planar graphs</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, Madera-Ramírez F.A., Fernández-Zepeda J.A., López-Martínez J.L., Flores-Lamas A.</span><span class="pub-ven"><i lang="en">Optimization Letters, 17(6), 1435–1454</i>.</span></div></li>
+<li data-p="2022-2024"><span class="yr">2023</span><div><span class="pub-title" lang="en">Agent coalitions for load balancing in cloud data centers</span><span class="pub-auth">Gutiérrez-García J.O., <strong>Trejo-Sánchez J.A.</strong>, Fajardo-Delgado D.</span><span class="pub-ven"><i lang="en">Journal of Parallel and Distributed Computing</i>.</span></div></li>
+<li data-p="2022-2024"><span class="yr">2022</span><div><span class="pub-title" lang="en">Approximation algorithm for the minimum hub cover set problem</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, Sansores-Pérez C.E., García-Díaz J., Fernández-Zepeda J.A.</span><span class="pub-ven"><i lang="en">IEEE Access, 10, 51419–51427</i>.</span></div></li>
+<li data-p="2022-2024"><span class="yr">2022</span><div><span class="pub-title" lang="en">Stable matching of users in a ridesharing model</span><span class="pub-auth">Fajardo-Delgado D., Hernández-Bernal C., Sánchez-Cervantes M.G., <strong>Trejo-Sánchez J.A.</strong>, Espinosa-Curiel I.E., Molinar-Solís J.E.</span><span class="pub-ven"><i lang="en">Applied Sciences, 12(15), 7797</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2021</span><div><span class="pub-title" lang="en">An immersed boundary neural network for solving elliptic equations with singular forces on arbitrary domains</span><span class="pub-auth">Balam R.I., Hernández-López F., <strong>Trejo-Sánchez J.</strong>, Zapata M.U.</span><span class="pub-ven"><i lang="en">Mathematical Biosciences and Engineering, 18(1), 22–56</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2020</span><div><span class="pub-title" lang="en">Panorama construction using binary trees</span><span class="pub-auth">Hernández-López F.J., <strong>Trejo-Sánchez J.A.</strong>, Rivera M.</span><span class="pub-ven"><i lang="en">Signal, Image and Video Processing, 14(4), 839–846</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2020</span><div><span class="pub-title" lang="en">BioMASS, a spatial model for situated multiagent systems that optimizes neighborhood search</span><span class="pub-auth">Sansores-Pérez C.E., <strong>Trejo-Sánchez J.A.</strong></span><span class="pub-ven"><i lang="en">IEEE Access, 8, 120282–120294</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2020</span><div><span class="pub-title" lang="en">A distributed algorithm for a maximal 2-packing set in Halin graphs</span><span class="pub-auth">Flores-Lamas A., Fernández-Zepeda J.A., <strong>Trejo-Sánchez J.A.</strong></span><span class="pub-ven"><i lang="en">Journal of Parallel and Distributed Computing</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2020</span><div><span class="pub-title" lang="en">A genetic algorithm for the maximum 2-packing set problem</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, Fajardo-Delgado D., Gutiérrez-García J.O.</span><span class="pub-ven"><i lang="en">International Journal of Applied Mathematics and Computer Science, 30(1), 173–184</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2018</span><div><span class="pub-title" lang="en">Algorithm to find a maximum 2-packing set in a cactus</span><span class="pub-auth">Flores-Lamas A., Fernández-Zepeda J.A., <strong>Trejo-Sánchez J.A.</strong></span><span class="pub-ven"><i lang="en">Theoretical Computer Science, 725, 31–51</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2018</span><div><span class="pub-title" lang="en">A multi-agent architecture for scheduling of high performance services in a GPU cluster</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, López-Martínez J.L., Gutiérrez-García J.O., Ramírez-Pacheco J.C., Fajardo-Delgado D.</span><span class="pub-ven"><i lang="en">International Journal of Combinatorial Optimization Problems and Informatics, 9(1), 12–22</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2018</span><div><span class="pub-title" lang="en">Simulation of an inelastic dispersive phenomenon: stimulated Brillouin scattering in a single-mode fiber segment through parallelism</span><span class="pub-auth">Sánchez-Lara R., <strong>Trejo-Sánchez J.A.</strong>, López-Martínez J.L., Álvarez-Chávez J.A.</span><span class="pub-ven"><i lang="en">The Journal of Supercomputing</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2018</span><div><span class="pub-title" lang="en">A parallel algorithm for the counting of ellipses present in conglomerates using GPU</span><span class="pub-auth">Yam-Uicab R., López-Martínez J., Llanes-Castro E., Narváez-Díaz L., <strong>Trejo-Sánchez J.</strong></span><span class="pub-ven"><i lang="en">Mathematical Problems in Engineering</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2017</span><div><span class="pub-title" lang="en">A self-stabilizing algorithm for a maximal 2-packing in a cactus graph under any scheduler</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, Fernández-Zepeda J.A., Ramírez-Pacheco J.C.</span><span class="pub-ven"><i lang="en">International Journal of Foundations of Computer Science, 28(08), 1021–1045</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2017</span><div><span class="pub-title" lang="en">Application of mathematical symmetrical group theory in the creation process of digital holograms</span><span class="pub-auth">Pérez-Ramírez A., Guerrero-Juk J., Sánchez-Lara R., <strong>Trejo-Sánchez J.A.</strong>, de la Cruz-May L.</span><span class="pub-ven"><i lang="en">Mathematical Problems in Engineering</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2017</span><div><span class="pub-title" lang="en">Classification of fractal signals using two-parameter non-extensive wavelet entropy</span><span class="pub-auth">Ramírez-Pacheco J.C., <strong>Trejo-Sánchez J.A.</strong>, Cortez-González J., Palacio R.R.</span><span class="pub-ven"><i lang="en">Entropy</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2017</span><div><span class="pub-title" lang="en">A fast Hough transform algorithm for straight lines detection in an image using GPU parallel computing with CUDA-C</span><span class="pub-auth">Yam-Uicab R., López-Martínez J.L., <strong>Trejo-Sánchez J.A.</strong>, Hidalgo-Silva H., González-Segura S.</span><span class="pub-ven"><i lang="en">The Journal of Supercomputing</i>.</span></div></li>
+<li data-p="antes"><span class="yr">2016</span><div><span class="pub-title" lang="en">A nonextensive wavelet (q, q0)-entropy for 1/fα signals</span><span class="pub-auth">Ramírez-Pacheco J.C., Rizo-Domínguez L., <strong>Trejo-Sánchez J.A.</strong>, Cortez-González J.</span><span class="pub-ven"><i lang="en">Revista Mexicana de Física</i>.</span></div></li>
+<li data-p="antes"><span class="yr">2012</span><div><span class="pub-title" lang="en">Wavelet q-Fisher information for scaling signal analysis</span><span class="pub-auth">Ramírez-Pacheco J., Torres-Román D., Argáez-Xool J., Rizo-Domínguez L., <strong>Trejo-Sánchez J.A.</strong>, Manzano-Pinzón F.</span><span class="pub-ven"><i lang="en">Entropy, 14(8)</i>.</span></div></li>
+<li data-p="antes"><span class="yr">2011</span><div><span class="pub-title" lang="en">Wavelet Fisher’s information measure of 1/fα signals</span><span class="pub-auth">Ramírez-Pacheco J., Torres-Román D., Rizo-Domínguez L., <strong>Trejo-Sánchez J.A.</strong>, Manzano-Pinzón F.</span><span class="pub-ven"><i lang="en">Entropy, 13(9)</i>.</span></div></li>
+<li data-p="antes"><span class="yr">2011</span><div><span class="pub-title" lang="en">Level-shift detection in communication network traffic traces</span><span class="pub-auth">Ramírez-Pacheco J., Torres-Román D., Rizo-Domínguez L., <strong>Trejo-Sánchez J.A.</strong>, Manzano-Pinzón F.</span><span class="pub-ven"><i lang="en">Ingeniería, revista académica, 15(2)</i>.</span></div></li>
+<li data-p="antes"><span class="yr">2007</span><div><span class="pub-title" lang="en">A tool for long-memory analysis in computer networks time series</span><span class="pub-auth">Ramírez-Pacheco J., Torres-Román D., <strong>Trejo-Sánchez J.A.</strong></span><span class="pub-ven"><i lang="en">Research in Computing Science</i>.</span></div></li>
+<li data-p="antes"><span class="yr">2007</span><div><span class="pub-title" lang="en">Multi-agent based control for urban traffic networks</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, Ramírez-Pacheco J.</span><span class="pub-ven"><i lang="en">Research in Computing Science</i>.</span></div></li>
+      </ol>
+      <h3 class="sub">Congresos y capítulos de libro</h3>
+      <ol class="tl">
+<li data-p="2022-2024"><span class="yr">2023</span><div><span class="pub-title" lang="en">Comparative analysis of five algorithms for the graph coloring problem in planar graphs</span><span class="pub-auth">Cadenas C., <strong>Trejo-Sánchez J.A.</strong>, Matajira D., Ramírez B.C., Manzano F.</span><span class="pub-ven"><i lang="en">Conferencia ICECCME, IEEE</i>.</span></div></li>
+<li data-p="2022-2024"><span class="yr">2022</span><div><span class="pub-title" lang="en">Teaching high-performance computing in developing countries: a case study in Mexican universities</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, Hernández-López F.J., Zapata M.Á.U., López-Martínez J.L., Fajardo-Delgado D., Ramírez-Pacheco J.C.</span><span class="pub-ven"><i lang="en">IEEE IPDPS Workshops, 338–345</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2018</span><div><span class="pub-title" lang="en">Fast random cactus graph generation</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, Vela-Navarro A., Flores-Lamas A., López-Martínez J.L., Bermejo-Sabbagh C., Cuevas-Cuevas N.L., Toral-Cruz H.</span><span class="pub-ven"><i lang="en">Capítulo en Springer, Supercomputing in Mexico (ISUM), 129–136</i>.</span></div></li>
+<li data-p="2017-2021"><span class="yr">2018</span><div><span class="pub-title" lang="en">Wireless sensor technology for intelligent data sensing: research trends and challenges</span><span class="pub-auth">Boubiche D.E., <strong>Trejo-Sánchez J.A.</strong>, Toral-Cruz H., López-Martínez J.L., Hidoussi F.</span><span class="pub-ven"><i lang="en">Capítulo en Intelligent Data Sensing and Processing for Health and Well-Being Applications, 41–58</i>.</span></div></li>
+<li data-p="antes"><span class="yr">2012</span><div><span class="pub-title" lang="en">A self-stabilizing algorithm for the maximal 2-packing in a cactus graph</span><span class="pub-auth"><strong>Trejo-Sánchez J.A.</strong>, Fernández-Zepeda J.A.</span><span class="pub-ven"><i lang="en">IEEE IPDPS Workshops, 863–871</i>.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="docencia" aria-labelledby="h-doc">
+  <div class="wrap">
+    <h2 id="h-doc">Docencia y comunidad</h2>
+    <div>
+      <h3 class="sub">Tesis dirigidas y codirigidas</h3>
+      <ol class="tl">
+<li><span class="yr">2025</span><div><span class="pub-title">Importancia de la diversidad en el Flow Shop Scheduling Problem</span><span class="pub-auth">José Ángel Alejandro Soto. Codirección, maestría en Matemáticas Industriales y Computación, CIMAT.</span></div></li>
+<li><span class="yr">2025</span><div><span class="pub-title">Algoritmo genético para un problema de programación integrada: caso de estudio en un proceso de extrusión de perfiles de aluminio</span><span class="pub-auth">Jonathan Adair Cisneros González. Dirección, maestría en Modelación y Optimización de Procesos, CIMAT.</span></div></li>
+<li><span class="yr">2025</span><div><span class="pub-title">Aplicación de heurísticas y metaheurísticas para la asignación de camas en pacientes en el sistema hospitalario</span><span class="pub-auth">Eder Renato Delgado Ávila. Codirección, maestría en Modelación y Optimización de Procesos, CIMAT.</span></div></li>
+<li><span class="yr">2023</span><div><span class="pub-title">Usando la descomposición de un grafo Halin para el diseño de algoritmos autoestabilizantes</span><span class="pub-auth">Daniel Orozco Lomelí. Codirección, maestría en Ciencias de la Computación, CICESE.</span></div></li>
+<li><span class="yr">2021</span><div><span class="pub-title">Algoritmos para el problema del conjunto independiente fuerte en grafos dispersos</span><span class="pub-auth">Carlos Alberto Oliva Moreno. Codirección, maestría en Ciencias de la Computación, CICESE.</span></div></li>
+<li><span class="yr">2021</span><div><span class="pub-title">Diseño de algoritmos autoestabilizantes para grafos Halin</span><span class="pub-auth">Tadeo Alan Gutiérrez Medina. Codirección, maestría, CICESE.</span></div></li>
+<li><span class="yr">2021</span><div><span class="pub-title">Control de tráfico urbano para vehículos de prioridad</span><span class="pub-auth">Guillermo Fernández Estrella. Dirección, licenciatura, TecNM.</span></div></li>
+<li><span class="yr">2019</span><div><span class="pub-title">Búsqueda del conjunto independiente máximo en grafos mediante técnicas de kernelización en cómputo paralelo por multiprocesador</span><span class="pub-auth">Andrés Vela Navarro. Dirección, licenciatura, TecNM.</span></div></li>
+<li><span class="yr">2018</span><div><span class="pub-title">Análisis de factibilidad del diseño de algoritmos autoestabilizantes para el conjunto independiente fuerte con peso máximo en un cactus</span><span class="pub-auth">David Zhou Tan. Codirección, maestría, CICESE.</span></div></li>
+<li><span class="yr">2018</span><div><span class="pub-title">Diseño de un modelo de viaje compartido a través del uso de teoría de juegos</span><span class="pub-auth">Carlos Hernández Bernal. Codirección, maestría, Instituto Tecnológico de Mérida.</span></div></li>
+      </ol>
+      <h3 class="sub">Cursos</h3>
+      <ol class="tl">
+<li><span class="yr">2025</span><div><span class="pub-title">Optimización heurística</span><span class="pub-auth">Maestría en Modelación y Optimización de Procesos, CIMAT</span></div></li>
+<li><span class="yr">2024</span><div><span class="pub-title">Cómputo científico de alto rendimiento</span><span class="pub-auth">Licenciatura, Facultad de Matemáticas, UADY</span></div></li>
+<li><span class="yr">2023</span><div><span class="pub-title">Teoría de lenguajes de programación</span><span class="pub-auth">Licenciatura, Facultad de Matemáticas, UADY</span></div></li>
+<li><span class="yr">2022</span><div><span class="pub-title">Algoritmos de aproximación</span><span class="pub-auth">Maestría en Matemáticas Industriales y Computación, CIMAT</span></div></li>
+<li><span class="yr">2021</span><div><span class="pub-title">Complejidad parametrizada</span><span class="pub-auth">Maestría en Ciencias de la Computación, UADY</span></div></li>
+<li><span class="yr">2021</span><div><span class="pub-title">Programación avanzada</span><span class="pub-auth">Maestría en Ingeniería, Instituto Tecnológico de Mérida</span></div></li>
+<li><span class="yr">2017–2022</span><div><span class="pub-title">Tópicos avanzados de programación</span><span class="pub-auth">Licenciatura, Instituto Tecnológico de Mérida</span></div></li>
+<li><span class="yr">2018–2020</span><div><span class="pub-title">Estructura de datos; Tópicos selectos de cómputo paralelo</span><span class="pub-auth">Licenciatura, Facultad de Matemáticas, UADY</span></div></li>
+<li><span class="yr">2017–2018</span><div><span class="pub-title">Sistemas distribuidos</span><span class="pub-auth">Licenciatura, Facultad de Matemáticas, UADY</span></div></li>
+<li><span class="yr">2014–2016</span><div><span class="pub-title">Algoritmos y estructuras de datos, inteligencia artificial, sistemas operativos, optimización aplicada y otros</span><span class="pub-auth">Universidad del Caribe, Cancún</span></div></li>
+      </ol>
+      <h3 class="sub">Divulgación</h3>
+      <ol class="tl">
+<li><span class="yr">2026</span><div><span class="pub-title">Programando con Robotín</span><span class="pub-auth">Escuela Primaria Lázaro Cárdenas del Río, por el Día Internacional de la Mujer y la Niña en la Ciencia</span></div></li>
+<li><span class="yr">2025</span><div><span class="pub-title">Alicia en el país de los algoritmos</span><span class="pub-auth">Telesecundaria Andrés Quintana Roo, Sierra Papacal</span></div></li>
+<li><span class="yr">2025</span><div><span class="pub-title">Diversión con algoritmos</span><span class="pub-auth">Visita de estudiantes del Instituto Tecnológico de Mérida al CIMAT</span></div></li>
+<li><span class="yr">2023</span><div><span class="pub-title">Ordenando números</span><span class="pub-auth">Escuela Primaria Lázaro Cárdenas del Río, Sierra Papacal</span></div></li>
+<li><span class="yr">2022</span><div><span class="pub-title">Algoritmos para la prevención de peleas en un bar</span><span class="pub-auth">Seminario de estadística y matemáticas aplicadas</span></div></li>
+<li><span class="yr">2021</span><div><span class="pub-title">Hay un robot entre nosotros</span><span class="pub-auth">Cápsula en Jóvenes en TV</span></div></li>
+      </ol>
+      <h3 class="sub">Distinciones y servicio</h3>
+      <ol class="tl">
+<li><span class="yr">2026–2030</span><div><span class="pub-title">Miembro del Sistema Nacional de Investigadoras e Investigadores, nivel 1</span></div></li>
+<li><span class="yr">2025</span><div><span class="pub-title">Organizador de la Escuela de algoritmos para problemas de optimización combinatoria</span><span class="pub-auth">Para estudiantes de licenciatura, CIMAT</span></div></li>
+<li><span class="yr">2025–2026</span><div><span class="pub-title">Diseño y facilitación del módulo «Introducción a los algoritmos y optimización de código»</span><span class="pub-auth">Diplomado de cómputo de alto desempeño para soluciones</span></div></li>
+<li><span class="yr">2020</span><div><span class="pub-title">Organizador de la Primera Escuela de Algoritmos Paralelos y Algoritmos Distribuidos</span></div></li>
+<li><span class="yr">2017–2020</span><div><span class="pub-title">Organizador y supervisor del taller de soluciones a problemas industriales (SPI)</span><span class="pub-auth">CIMAT</span></div></li>
+<li><span class="yr">Activo</span><div><span class="pub-title">Comité técnico del Laboratorio de Supercómputo del Bajío</span></div></li>
+<li><span class="yr">Activo</span><div><span class="pub-title">Enlace institucional del programa de fortalecimiento de capacidades digitales de la SIIES, Yucatán</span></div></li>
+<li><span class="yr">Activo</span><div><span class="pub-title">Revisor de artículos en revistas indexadas en el JCR</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contacto" aria-labelledby="h-con">
+  <div class="wrap">
+    <h2 id="h-con">Contacto</h2>
+    <div>
+      <p>Escríbeme si quieres colaborar, proponer un problema de optimización o conocer los temas de tesis disponibles.</p>
+      <p><a class="mail" href="mailto:joel.trejo@cimat.mx">joel.trejo@cimat.mx</a></p>
+      <p>Centro de Investigación en Matemáticas (CIMAT), Unidad Mérida, Yucatán, México.</p>
+      <dl class="tools">
+        <dt>Lenguajes</dt><dd>C, C++, Java, Python, R</dd>
+        <dt>Cómputo paralelo</dt><dd>CUDA, OpenMP, MPI, Hadoop</dd>
+        <dt>Idiomas</dt><dd>Español (nativo), inglés (avanzado en conversación)</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Página actualizada en octubre de 2026.</div>
+</footer>
+
+<script>
+(function () {
+  /* --- filtro de publicaciones --- */
+  var chips = document.getElementById('filtros');
+  var items = document.querySelectorAll('#lista-revistas li');
+  function aplicar(f) {
+    items.forEach(function (li) { li.hidden = !(f === 'todas' || li.dataset.p === f); });
+    chips.querySelectorAll('.chip').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.dataset.f === f ? 'true' : 'false');
+    });
+  }
+  chips.classList.add('on');
+  chips.addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (b) aplicar(b.dataset.f);
+  });
+  aplicar('reciente');
+
+  /* --- grafo: el algoritmo de Prim construye un árbol de expansión mínima --- */
+  var svg = document.getElementById('grafo');
+  var estado = document.getElementById('grafo-estado');
+  var NS = 'http://www.w3.org/2000/svg';
+  var W = 520, H = 460, N = 30, MIN = 50;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function rng(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  var rand = rng(20261020), pts = [], tries = 0;
+  while (pts.length < N && tries++ < 20000) {
+    var p = { x: 28 + rand() * (W - 56), y: 28 + rand() * (H - 56) };
+    if (pts.every(function (q) { return Math.hypot(p.x - q.x, p.y - q.y) >= MIN; })) pts.push(p);
+  }
+  N = pts.length;
+  function dist(i, j) { return Math.hypot(pts[i].x - pts[j].x, pts[i].y - pts[j].y); }
+
+  /* Prim desde el punto más cercano a la esquina superior izquierda */
+  var start = 0;
+  pts.forEach(function (p, i) { if (p.x + p.y < pts[start].x + pts[start].y) start = i; });
+  var inT = new Array(N).fill(false), best = new Array(N).fill(Infinity), from = new Array(N).fill(-1);
+  var order = []; best[start] = 0;
+  for (var k = 0; k < N; k++) {
+    var u = -1;
+    for (var v = 0; v < N; v++) if (!inT[v] && (u < 0 || best[v] < best[u])) u = v;
+    inT[u] = true;
+    if (from[u] >= 0) order.push([from[u], u]);
+    for (var w = 0; w < N; w++) if (!inT[w] && dist(u, w) < best[w]) { best[w] = dist(u, w); from[w] = u; }
+  }
+
+  function el(name, attrs) {
+    var e = document.createElementNS(NS, name);
+    for (var a in attrs) e.setAttribute(a, attrs[a]);
+    return e;
+  }
+  var run = 0;
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+  function dibujar() {
+    var id = ++run;
+    svg.textContent = '';
+    for (var i = 0; i < N; i++) for (var j = i + 1; j < N; j++)
+      if (dist(i, j) < 112) svg.appendChild(el('line', { 'class': 'e-cand', x1: pts[i].x, y1: pts[i].y, x2: pts[j].x, y2: pts[j].y }));
+    var nodes = pts.map(function (p, i) {
+      var c = el('circle', { 'class': 'n' + (i === start ? ' root' : ''), cx: p.x, cy: p.y, r: i === start ? 8 : 5.5 });
+      svg.appendChild(c); return c;
+    });
+    var tree = order.map(function (e) {
+      var a = pts[e[0]], b = pts[e[1]], len = Math.hypot(a.x - b.x, a.y - b.y);
+      var l = el('line', { 'class': 'e-tree', x1: a.x, y1: a.y, x2: b.x, y2: b.y });
+      l.style.strokeDasharray = len; l.style.strokeDashoffset = reduce ? 0 : len;
+      if (reduce) l.style.opacity = 1; else l.style.opacity = 0;
+      svg.insertBefore(l, nodes[0]); return l;
+    });
+    nodes.forEach(function (c) { svg.appendChild(c); });
+    if (reduce) {
+      order.forEach(function (e) { nodes[e[1]].setAttribute('class', 'n in'); });
+      estado.textContent = 'Árbol de expansión mínima: ' + order.length + ' aristas';
+      return;
+    }
+    (async function () {
+      await sleep(500);
+      for (var s = 0; s < order.length; s++) {
+        if (id !== run) return;
+        var l = tree[s];
+        l.style.opacity = 1;
+        l.style.transition = 'stroke-dashoffset 220ms ease-out';
+        l.style.strokeDashoffset = 0;
+        nodes[order[s][1]].setAttribute('class', 'n in');
+        estado.textContent = 'Prim: arista ' + (s + 1) + ' de ' + order.length;
+        await sleep(190);
+      }
+      if (id === run) estado.textContent = 'Árbol de expansión mínima: ' + order.length + ' aristas';
+    })();
+  }
+  document.getElementById('grafo-repetir').addEventListener('click', dibujar);
+  dibujar();
+})();
+</script>
+</body>
+</html>
