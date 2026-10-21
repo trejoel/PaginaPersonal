@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juegos de optimización | Joel Antonio Trejo-Sánchez</title>
+<meta name="description" content="Juegos interactivos de optimización: ruta de reparto (agente viajero), calendarización de quirófanos y distribución a farmacias (ruteo de vehículos).">
+<meta name="theme-color" content="#EEF1F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1A30" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Juegos de optimización | Joel Antonio Trejo-Sánchez">
+<meta property="og:description" content="Juegos interactivos de optimización: ruta de reparto (agente viajero), calendarización de quirófanos y distribución a farmacias (ruteo de vehículos).">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F2C59'/%3E%3Cpath d='M8 22 15 10 24 20M15 10 22 8' stroke='%23E58AA3' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='8' cy='22' r='3' fill='%23E3B04B'/%3E%3Ccircle cx='15' cy='10' r='3' fill='%23E58AA3'/%3E%3Ccircle cx='24' cy='20' r='3' fill='%23E58AA3'/%3E%3Ccircle cx='22' cy='8' r='3' fill='%23E58AA3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap">
+<link rel="stylesheet" href="css/estilo.css">
+
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<nav class="top" aria-label="Secciones">
+  <div class="wrap">
+    <a class="brand" href="index.html">J. A. Trejo-Sánchez</a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="investigacion.html">Investigación</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="juegos.html" aria-current="page">Juegos</a></li>
+      <li><a href="publicaciones.html">Publicaciones</a></li>
+      <li><a href="docencia.html">Docencia</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="contenido">
+<section class="sec" id="juegos" aria-labelledby="h-jue">
+  <div class="wrap">
+    <h1 class="ph" id="h-jue">Juegos de optimización</h1>
+    <div>
+      <p>Tres problemas difíciles de los que estudio, para que los pruebes. Intenta resolverlos tú primero y después compara tu respuesta con la del algoritmo.</p>
+
+      <article class="game" id="g-tsp" aria-labelledby="h-tsp">
+        <h3 id="h-tsp">La ruta de la bodega</h3>
+        <p>Sales de la bodega, debes pasar por todas las tiendas una sola vez y volver al punto de partida recorriendo la menor distancia posible. Es el problema del agente viajero, que es NP-difícil. Toca las tiendas en el orden que elijas; para deshacer, toca la última tienda de tu ruta.</p>
+        <div class="ctrl">
+          <label class="rng" for="t-n">Tiendas <input type="range" id="t-n" min="5" max="14" value="9"><output id="t-nv" for="t-n">9</output></label>
+          <button type="button" class="gb" id="t-new">Nueva instancia</button>
+          <button type="button" class="gb" id="t-undo">Deshacer</button>
+          <button type="button" class="gb" id="t-reset">Reiniciar ruta</button>
+          <button type="button" class="gb go" id="t-solve">Ver soluciones</button>
+        </div>
+        <svg class="map" id="t-map" viewBox="0 0 560 400" role="group"
+             aria-label="Minimapa con una bodega y varias tiendas numeradas. Elige las tiendas en el orden en que las visitarás."></svg>
+        <p class="status" id="t-status" role="status" aria-live="polite"></p>
+        <div id="t-res" hidden>
+          <div class="tog" id="t-tog" role="group" aria-label="Rutas visibles en el mapa">
+            <span class="lbl">Mostrar:</span>
+            <button type="button" class="chip" data-k="user" aria-pressed="true"><i class="sw" style="background:var(--accent)"></i>Mi ruta</button>
+            <button type="button" class="chip" data-k="opt" aria-pressed="true"><i class="sw" style="background:var(--ink)"></i>Óptima</button>
+            <button type="button" class="chip" data-k="apx" aria-pressed="true"><i class="sw" style="background:var(--gold)"></i>Aproximada</button>
+          </div>
+          <div class="tog" id="t-met" role="group" aria-label="Algoritmo de aproximación">
+            <span class="lbl">Aproximación:</span>
+            <button type="button" class="chip" data-m="nn" aria-pressed="true">Vecino más cercano</button>
+            <button type="button" class="chip" data-m="mst" aria-pressed="false">Árbol de expansión mínima</button>
+          </div>
+          <div class="tw"><table class="cmp">
+            <thead><tr><th scope="col">Ruta</th><th scope="col">Distancia</th><th scope="col">Sobre el óptimo</th></tr></thead>
+            <tbody id="t-rows"></tbody>
+          </table></div>
+          <p class="note" id="t-note"></p>
+        </div>
+      </article>
+
+      <article class="game" id="g-sch" aria-labelledby="h-sch">
+        <h3 id="h-sch">Quirófanos del día</h3>
+        <p>Un hospital tiene varios quirófanos y una lista de cirugías con su duración en horas. Reparte las cirugías para que el último quirófano termine lo antes posible. Es un problema de programación de tareas, de la misma familia de los que aparecen al asignar camas y recursos hospitalarios. Elige una cirugía, toca el quirófano donde la programarás y, para devolverla a la lista, toca su bloque.</p>
+        <div class="ctrl">
+          <label class="rng" for="s-n">Cirugías <input type="range" id="s-n" min="6" max="12" value="9"><output id="s-nv" for="s-n">9</output></label>
+          <label class="rng" for="s-m">Quirófanos
+            <select id="s-m"><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option></select></label>
+          <button type="button" class="gb" id="s-new">Nueva instancia</button>
+          <button type="button" class="gb" id="s-reset">Reiniciar</button>
+          <button type="button" class="gb go" id="s-solve">Ver soluciones</button>
+        </div>
+        <div class="pool" id="s-pool" role="group" aria-label="Cirugías por programar"></div>
+        <div id="s-rooms"></div>
+        <p class="status" id="s-status" role="status" aria-live="polite"></p>
+        <div id="s-res" hidden>
+          <div class="tw"><table class="cmp">
+            <thead><tr><th scope="col">Calendario</th><th scope="col">Termina</th><th scope="col">Sobre el óptimo</th></tr></thead>
+            <tbody id="s-rows"></tbody>
+          </table></div>
+          <p class="note" id="s-note"></p>
+          <div id="s-gantts"></div>
+        </div>
+      </article>
+
+      <article class="game" id="g-vrp" aria-labelledby="h-vrp">
+        <h3 id="h-vrp">Distribución a farmacias</h3>
+        <p>Un almacén debe surtir insumos a varias farmacias (centros de acopio) con 5 automóviles de la misma capacidad. Cada farmacia pide cierta cantidad de cajas. Cada auto sale del almacén, visita sus farmacias y regresa. Atiende a todas con la menor distancia total. Es un problema de ruteo de vehículos con capacidad (CVRP). Elige un auto, toca las farmacias que atenderá en el orden de la visita y, para quitar una, tócala otra vez.</p>
+        <div class="ctrl">
+          <label class="rng" for="v-n">Farmacias <input type="range" id="v-n" min="8" max="12" value="10"><output id="v-nv" for="v-n">10</output></label>
+          <button type="button" class="gb" id="v-new">Nueva instancia</button>
+          <button type="button" class="gb" id="v-reset">Reiniciar</button>
+          <button type="button" class="gb go" id="v-solve">Ver soluciones</button>
+        </div>
+        <p class="note" id="v-info"></p>
+        <div class="vrp">
+          <div class="fleet" id="v-fleet" role="group" aria-label="Autos"></div>
+          <svg class="map" id="v-map" viewBox="0 0 560 400" role="group"
+               aria-label="Minimapa con un almacén y varias farmacias. Cada farmacia indica las cajas que pide. Elige un auto y toca las farmacias que atenderá."></svg>
+        </div>
+        <p class="status" id="v-status" role="status" aria-live="polite"></p>
+        <div id="v-res" hidden>
+          <div class="tog" id="v-view" role="group" aria-label="Solución mostrada en el mapa">
+            <span class="lbl">Ver en el mapa:</span>
+            <button type="button" class="chip" data-v="user" aria-pressed="true">Mi solución</button>
+            <button type="button" class="chip" data-v="opt" aria-pressed="false">Óptima</button>
+            <button type="button" class="chip" data-v="apx" aria-pressed="false">Aproximada</button>
+          </div>
+          <div class="tw"><table class="cmp">
+            <thead><tr><th scope="col">Solución</th><th scope="col">Distancia</th><th scope="col">Autos</th><th scope="col">Sobre el óptimo</th></tr></thead>
+            <tbody id="v-rows"></tbody>
+          </table></div>
+          <p class="note" id="v-note"></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Página actualizada en octubre de 2026.</div>
+</footer>
+<script src="js/juegos.js"></script>
+</body>
+</html>

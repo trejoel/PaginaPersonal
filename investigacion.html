@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Investigación | Joel Antonio Trejo-Sánchez</title>
+<meta name="description" content="Líneas de investigación y resultados recientes de Joel Antonio Trejo-Sánchez: algoritmos en grafos, optimización combinatoria y sistemas multi-agente.">
+<meta name="theme-color" content="#EEF1F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1A30" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Investigación | Joel Antonio Trejo-Sánchez">
+<meta property="og:description" content="Líneas de investigación y resultados recientes de Joel Antonio Trejo-Sánchez: algoritmos en grafos, optimización combinatoria y sistemas multi-agente.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F2C59'/%3E%3Cpath d='M8 22 15 10 24 20M15 10 22 8' stroke='%23E58AA3' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='8' cy='22' r='3' fill='%23E3B04B'/%3E%3Ccircle cx='15' cy='10' r='3' fill='%23E58AA3'/%3E%3Ccircle cx='24' cy='20' r='3' fill='%23E58AA3'/%3E%3Ccircle cx='22' cy='8' r='3' fill='%23E58AA3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap">
+<link rel="stylesheet" href="css/estilo.css">
+
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<nav class="top" aria-label="Secciones">
+  <div class="wrap">
+    <a class="brand" href="index.html">J. A. Trejo-Sánchez</a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="investigacion.html" aria-current="page">Investigación</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="juegos.html">Juegos</a></li>
+      <li><a href="publicaciones.html">Publicaciones</a></li>
+      <li><a href="docencia.html">Docencia</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="contenido">
+<section class="sec" id="investigacion" aria-labelledby="h-inv">
+  <div class="wrap">
+    <h1 class="ph" id="h-inv">Investigación</h1>
+    <div>
+      <div class="area">
+        <h3>Algoritmos en grafos</h3>
+        <p>Diseño algoritmos exactos, de aproximación y distribuidos sobre familias de grafos como árboles, cactus, grafos planos y de Halin. He trabajado en conjuntos independientes fuertes, <i lang="en">2-packing</i>, <i lang="en">s-club</i>, cubiertas de concentradores y <i lang="en">graph burning</i>. Mi tesis de doctorado, dirigida por José Alberto Fernández Zepeda en el CICESE, trató los algoritmos distribuidos para el conjunto independiente fuerte.</p>
+      </div>
+      <div class="area">
+        <h3>Optimización combinatoria</h3>
+        <p>Aplico técnicas de investigación de operaciones, heurísticas, metaheurísticas y programación entera a problemas de programación de tareas (<i lang="en">flowshop</i>), ruteo de vehículos, asignación de camas hospitalarias y cobertura de emergencias. Me interesan tanto las cotas teóricas como los algoritmos que funcionan en instancias reales.</p>
+      </div>
+      <div class="area">
+        <h3>Sistemas multi-agente y cómputo de alto rendimiento</h3>
+        <p>Construyo simuladores y herramientas basadas en agentes para tráfico urbano, planificación y sistemas hospitalarios. Programo en GPU con CUDA y en paralelo con OpenMP y MPI para acelerar algoritmos y simulaciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="resultados" aria-labelledby="h-res">
+  <div class="wrap">
+    <h2 id="h-res">Resultados recientes</h2>
+    <div>
+      <article class="res">
+        <div class="fig">112 de 120<small>instancias de Taillard con cotas mejoradas, y 430 de 480 en VRF</small></div>
+        <div>
+          <h3>Cotas para el <i lang="en">flowshop</i> de permutación</h3>
+          <p class="meta">Alejandro-Soto, Segura y Trejo-Sánchez. <i lang="en">Computers &amp; Operations Research</i>, 2026.</p>
+          <p>Partimos de una formulación matricial del problema para obtener una cota superior y un marco general de cotas inferiores, basado en un problema de mínimo-máximo sobre conjuntos de caminos. En el preprint, las nuevas cotas mejoran las conocidas en 112 de las 120 instancias de Taillard y en 430 de las 480 de VRF. También aportamos resultados asintóticos sobre una conjetura de Taillard.</p>
+          <p><a href="https://arxiv.org/abs/2509.23512">Leer el preprint en arXiv</a></p>
+        </div>
+      </article>
+      <article class="res">
+        <div class="fig">O(<i>s</i>·<i>n</i>)<small>tiempo para hallar un <i lang="en">s-club</i> máximo en un árbol</small></div>
+        <div>
+          <h3>Un <i lang="en">s-club</i> máximo en árboles</h3>
+          <p class="meta">Fernández-Zepeda, Flores-Lamas, Hague y Trejo-Sánchez. <i lang="en">European Journal of Operational Research</i>, 2025.</p>
+          <p>Un <i lang="en">s-club</i> es un conjunto de vértices cuyo subgrafo inducido tiene diámetro máximo <i>s</i>; con <i>s</i> = 1 se obtiene una clique. El problema es NP-difícil en grafos arbitrarios. Proponemos un algoritmo de programación dinámica que lo resuelve en árboles en tiempo O(<i>s</i>·<i>n</i>) y que supera a los algoritmos previos para árboles en teoría y en experimentos.</p>
+          <p><a href="https://pure.royalholloway.ac.uk/en/publications/a-dynamic-programming-algorithm-for-the-maximum-s-club-problem-on/">Ver el resumen en Royal Holloway</a></p>
+        </div>
+      </article>
+      <article class="res">
+        <div class="fig">102 400<small>vértices en los grafos más grandes de las pruebas</small></div>
+        <div>
+          <h3>Una heurística voraz para <i lang="en">graph burning</i></h3>
+          <p class="meta">García-Díaz, Cornejo-Acosta y Trejo-Sánchez. <i lang="en">Computing</i>, 2025.</p>
+          <p>El número de <i lang="en">burning</i> mide qué tan vulnerable es un grafo ante un contagio. Analizamos una heurística determinista que corre en tiempo O(<i>mn</i> + <i>pn</i>²) y que se apoya en una conexión con el problema de cobertura máxima por grupos. En grafos de referencia y sintéticos de hasta 102 400 vértices encontró la mayoría de las soluciones óptimas y mejores conocidas.</p>
+          <p><a href="https://arxiv.org/abs/2401.07577">Leer el preprint en arXiv</a></p>
+        </div>
+      </article>
+      <article class="res">
+        <div class="fig">2<small>herramientas de software publicadas en <i lang="en">Software Impacts</i></small></div>
+        <div>
+          <h3>Herramientas multi-agente de código reutilizable</h3>
+          <p class="meta">Trejo-Sánchez et al. y Sansores, Trejo-Sánchez y Negrón. <i lang="en">Software Impacts</i>, 2025.</p>
+          <p><i lang="en">MaSchedule</i> es una herramienta multi-agente para problemas de programación de tareas. La segunda es un marco de simulación multi-agente con búsqueda espacial de vecindarios optimizada, que nació del modelo BioMASS (<i lang="en">IEEE Access</i>, 2020).</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Página actualizada en octubre de 2026.</div>
+</footer>
+</body>
+</html>
