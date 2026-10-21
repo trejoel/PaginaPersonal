@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Joel Antonio Trejo-Sánchez | CIMAT Mérida</title>
 <meta name="description" content="Página de Joel Antonio Trejo-Sánchez, investigador del CIMAT Unidad Mérida. Algoritmos en grafos, optimización combinatoria y sistemas multi-agente.">
-<meta name="theme-color" content="#EDF1EE" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F1B2D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#EEF1F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1A30" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Joel Antonio Trejo-Sánchez">
 <meta property="og:description" content="Algoritmos en grafos, optimización combinatoria y sistemas multi-agente. CIMAT Unidad Mérida.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213D'/%3E%3Cpath d='M8 22 15 10 24 20M15 10 22 8' stroke='%235CCBCB' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='8' cy='22' r='3' fill='%23E3A93A'/%3E%3Ccircle cx='15' cy='10' r='3' fill='%235CCBCB'/%3E%3Ccircle cx='24' cy='20' r='3' fill='%235CCBCB'/%3E%3Ccircle cx='22' cy='8' r='3' fill='%235CCBCB'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F2C59'/%3E%3Cpath d='M8 22 15 10 24 20M15 10 22 8' stroke='%23E58AA3' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='8' cy='22' r='3' fill='%23E3B04B'/%3E%3Ccircle cx='15' cy='10' r='3' fill='%23E58AA3'/%3E%3Ccircle cx='24' cy='20' r='3' fill='%23E58AA3'/%3E%3Ccircle cx='22' cy='8' r='3' fill='%23E58AA3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap">
@@ -19,21 +19,22 @@
 </script>
 <style>
 :root{
-  --bg:#EDF1EE; --surface:#F7F9F7; --ink:#14213D; --muted:#46556D; --line:#C6D1CB;
-  --teal:#0B7A7E; --teal-ink:#086468; --on-teal:#FFFFFF; --ochre:#E3A93A;
+  /* Azul institucional (tinta), guinda (acento) y dorado (detalle). Cambia aquí los códigos exactos si lo deseas. */
+  --bg:#EEF1F1; --surface:#F7F9F9; --ink:#0F2C59; --muted:#42526F; --line:#C9D2D8;
+  --accent:#9D2449; --accent-ink:#7F1B3A; --on-accent:#FFFFFF; --gold:#C79A3E;
   --serif:"Literata",Georgia,"Times New Roman",serif;
   --sans:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){
-  :root{--bg:#0F1B2D;--surface:#162841;--ink:#E8EEF2;--muted:#A9B7C8;--line:#2B3D58;
-        --teal:#5CCBCB;--teal-ink:#7DDADA;--on-teal:#0F1B2D;--ochre:#E8B75A;}
+  :root{--bg:#0D1A30;--surface:#15264A;--ink:#E8EEF5;--muted:#A9B8CC;--line:#2A3D5E;
+        --accent:#E58AA3;--accent-ink:#F0A5B9;--on-accent:#0D1A30;--gold:#E3B04B;}
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.7 var(--serif)}
-a{color:var(--teal-ink);text-underline-offset:.2em}
-a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:3px}
+a{color:var(--accent-ink);text-underline-offset:.2em}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
 .wrap{max-width:76rem;margin:0 auto;padding:0 1.25rem}
 @media (min-width:44rem){.wrap{padding:0 2.5rem}}
 .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--bg);padding:.6rem 1rem;z-index:20}
@@ -46,7 +47,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offse
 .brand{font:700 1.05rem/1 var(--sans);color:var(--ink);text-decoration:none;letter-spacing:-.01em}
 .top ul{display:flex;gap:.25rem 1.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap;font:500 .95rem/1.4 var(--sans)}
 .top li a{color:var(--muted);text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent}
-.top li a:hover{color:var(--ink);border-bottom-color:var(--teal)}
+.top li a:hover{color:var(--ink);border-bottom-color:var(--accent)}
 
 /* portada */
 .hero{padding:3.5rem 0 4.5rem}
@@ -59,22 +60,22 @@ h1 span{display:block;white-space:nowrap}
 .role{color:var(--muted);max-width:35rem;margin:0 0 2rem}
 .actions{display:flex;flex-wrap:wrap;gap:1rem 1.75rem;align-items:center}
 .btn{display:inline-block;font:600 1rem/1 var(--sans);padding:.95rem 1.5rem;border-radius:999px;
-     background:var(--teal);color:var(--on-teal);text-decoration:none}
-.btn:hover{background:var(--teal-ink)}
+     background:var(--accent);color:var(--on-accent);text-decoration:none}
+.btn:hover{background:var(--accent-ink)}
 .link{font:600 1rem/1.2 var(--sans);color:var(--ink);text-decoration:underline;
-      text-decoration-color:var(--teal);text-decoration-thickness:2px}
+      text-decoration-color:var(--accent);text-decoration-thickness:2px}
 .graph{margin:0}
 .graph svg{display:block;width:100%;height:auto}
 .graph figcaption{display:flex;justify-content:space-between;align-items:center;gap:1rem;
                   margin-top:.75rem;font-size:.9rem;color:var(--muted)}
 .graph button{font:500 .9rem/1 var(--sans);background:none;color:var(--ink);border:1px solid var(--line);
               border-radius:999px;padding:.5rem 1rem;cursor:pointer}
-.graph button:hover{border-color:var(--teal)}
+.graph button:hover{border-color:var(--accent)}
 .e-cand{stroke:var(--line);stroke-width:1}
-.e-tree{stroke:var(--teal);stroke-width:2.75;stroke-linecap:round;fill:none}
+.e-tree{stroke:var(--accent);stroke-width:2.75;stroke-linecap:round;fill:none}
 .n{fill:var(--bg);stroke:var(--muted);stroke-width:1.5}
-.n.in{fill:var(--teal);stroke:var(--teal)}
-.n.root{fill:var(--ochre);stroke:var(--ochre)}
+.n.in{fill:var(--ink);stroke:var(--ink)}
+.n.root{fill:var(--gold);stroke:var(--gold)}
 @media (prefers-reduced-motion:reduce){.graph button{display:none}}
 
 /* secciones */
@@ -100,7 +101,7 @@ h3{font:650 1.3rem/1.25 var(--sans);letter-spacing:-.01em;margin:0 0 .5rem}
 .res{display:grid;gap:1rem 2.5rem;padding:2rem 0;border-top:1px solid var(--line)}
 .res:first-child{border-top:0;padding-top:0}
 @media (min-width:48rem){.res{grid-template-columns:15rem minmax(0,1fr)}}
-.fig{font:700 clamp(2.2rem,4.6vw,3.2rem)/1 var(--sans);color:var(--teal-ink);letter-spacing:-.02em;
+.fig{font:700 clamp(2.2rem,4.6vw,3.2rem)/1 var(--sans);color:var(--ink);letter-spacing:-.02em;
      font-variation-settings:"wdth" 85,"opsz" 72}
 .fig small{display:block;font:400 .9rem/1.4 var(--serif);color:var(--muted);letter-spacing:0;margin-top:.6rem;
            font-variation-settings:normal}
@@ -132,17 +133,90 @@ h3{font:650 1.3rem/1.25 var(--sans);letter-spacing:-.01em;margin:0 0 .5rem}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.25rem}
 .chip{font:500 .92rem/1 var(--sans);border:1px solid var(--line);background:transparent;color:var(--ink);
       border-radius:999px;padding:.55rem 1rem;cursor:pointer}
-.chip:hover{border-color:var(--teal)}
+.chip:hover{border-color:var(--accent)}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .chips:not(.on){display:none}
 
 /* contacto */
 .mail{display:inline-block;font:650 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sans);letter-spacing:-.01em;
-      color:var(--ink);text-decoration-color:var(--teal);text-decoration-thickness:3px;word-break:break-word}
+      color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:3px;word-break:break-word}
 .tools{display:grid;gap:.35rem 2rem;margin:1.5rem 0 0;max-width:44rem}
 @media (min-width:44rem){.tools{grid-template-columns:9rem minmax(0,1fr)}}
 .tools dt{font:600 .95rem/1.7 var(--sans);color:var(--muted)}
 .tools dd{margin:0}
+/* juegos */
+.game{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.25rem;margin:0 0 2.5rem}
+@media (min-width:48rem){.game{padding:1.75rem 2rem}}
+.game h3{font-size:1.5rem}
+.ctrl{display:flex;flex-wrap:wrap;gap:.6rem 1.1rem;align-items:center;margin:1.25rem 0 1rem}
+.rng{display:flex;align-items:center;gap:.6rem;font:500 .95rem/1 var(--sans);color:var(--muted)}
+.rng output{color:var(--ink);font-weight:700;min-width:1.5ch;text-align:right}
+.rng input{accent-color:var(--accent);width:7.5rem}
+.rng select{font:500 .95rem/1 var(--sans);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.45rem .6rem}
+.gb{font:600 .92rem/1 var(--sans);padding:.7rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.gb:hover:not(:disabled){border-color:var(--accent)}
+.gb:disabled{opacity:.4;cursor:default}
+.gb.go{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.gb.go:hover:not(:disabled){background:var(--accent-ink);border-color:var(--accent-ink)}
+.status{font:500 1rem/1.5 var(--sans);min-height:1.5em;margin:.9rem 0 0}
+.tog{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0 .25rem}
+.tog .lbl{font:500 .92rem/1 var(--sans);color:var(--muted);margin-right:.25rem}
+.sw{display:inline-block;width:.8rem;height:.8rem;border-radius:50%;margin-right:.5rem;vertical-align:-.05em;box-shadow:0 0 0 1.5px var(--muted)}
+.tw{overflow-x:auto}
+.cmp{width:100%;border-collapse:collapse;font:500 .95rem/1.4 var(--sans);margin:.75rem 0;font-variant-numeric:tabular-nums}
+.cmp th,.cmp td{text-align:left;padding:.6rem .6rem .6rem 0;border-top:1px solid var(--line);vertical-align:top}
+.cmp thead th{border-top:0;color:var(--muted);font-weight:600}
+.cmp td:nth-child(n+2),.cmp th:nth-child(n+2){text-align:right;padding-right:.5rem}
+.note{font-size:.95rem;color:var(--muted)}
+
+/* mapa */
+.map{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line);
+     background:color-mix(in srgb,var(--ink) 5%,var(--surface))}
+.map .st{stroke:var(--line);fill:none;stroke-linecap:butt}
+.map .park{fill:var(--line);opacity:.55}
+.map .cap{font:500 11px var(--sans);fill:var(--muted)}
+.rt{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.rt-user{stroke:var(--accent);stroke-width:3.5}
+.rt-opt{stroke:var(--ink);stroke-width:6;opacity:.8}
+.rt-apx{stroke:var(--gold);stroke-width:4;stroke-dasharray:10 7}
+.city{cursor:pointer;outline:none}
+.city .dot{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.city text{font:700 13px var(--sans);fill:var(--ink);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.city.vis .dot{fill:var(--ink)}
+.city.vis text{fill:var(--bg)}
+.city.last .dot{stroke:var(--accent);stroke-width:4}
+.city:hover .dot,.city:focus-visible .dot{stroke:var(--accent);stroke-width:4}
+.depot path{fill:var(--gold);stroke:var(--ink);stroke-width:2;stroke-linejoin:round}
+.depot .door{fill:var(--ink);stroke:none}
+.depot text{font:700 11px var(--sans);fill:var(--ink);text-anchor:middle}
+
+/* quirófanos */
+.pool{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;min-height:3.25rem;padding:.75rem;border:1px dashed var(--line);border-radius:8px;margin:0 0 1.25rem}
+.pool .none{color:var(--muted);font:500 .92rem/1.3 var(--sans)}
+.job{font:700 .95rem/1 var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--ink);border-radius:8px;padding:.7rem .8rem;cursor:pointer}
+.job small{font-weight:500;color:var(--muted);margin-left:.4rem;font-size:.85em}
+.job:hover{border-color:var(--accent)}
+.job[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.job[aria-pressed="true"] small{color:inherit}
+.room{margin:0 0 .9rem}
+.room-h{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.35rem;font:600 .95rem/1.2 var(--sans)}
+.room-h .load{color:var(--muted);font-weight:500;font-variant-numeric:tabular-nums}
+.room-h .gb{padding:.5rem .85rem;font-size:.85rem}
+.lane{position:relative;display:flex;height:2.9rem;border:1px solid var(--line);border-radius:6px;overflow:hidden;
+      background:var(--bg) repeating-linear-gradient(90deg,transparent 0,transparent calc(var(--u) - 1px),var(--line) calc(var(--u) - 1px),var(--line) var(--u))}
+.lane.target{cursor:pointer;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.blk{flex:none;display:flex;align-items:center;justify-content:center;gap:.25rem;overflow:hidden;padding:0;
+     font:700 .85rem/1 var(--sans);color:var(--bg);background:var(--ink);border:0;border-right:2px solid var(--bg);white-space:nowrap;
+     width:calc(var(--u) * var(--p))}
+button.blk{cursor:pointer}
+button.blk:hover{background:var(--accent)}
+.blk small{font-weight:500;opacity:.8;font-size:.9em}
+.cmax{position:absolute;top:0;bottom:0;left:calc(var(--u) * var(--c));border-left:2px dashed var(--accent);pointer-events:none}
+.gantt{margin:0 0 1.5rem}
+.gantt h4{font:650 1rem/1.2 var(--sans);margin:0 0 .6rem}
+.gantt .lane{height:2.2rem}
+@media (prefers-reduced-motion:no-preference){.lane,.blk{transition:background-color .15s,border-color .15s}}
+
 footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.92rem}
 </style>
 </head>
@@ -156,6 +230,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);f
       <li><a href="#investigacion">Investigación</a></li>
       <li><a href="#resultados">Resultados</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#juegos">Juegos</a></li>
       <li><a href="#publicaciones">Publicaciones</a></li>
       <li><a href="#docencia">Docencia</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -292,6 +367,72 @@ footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);f
 <li><span class="yr">2020</span><div><span class="pub-title">Conjunto independiente fuerte en gráficas planas</span><span class="pub-auth">Proyecto de ciencia de frontera del CONACYT (convocatoria 2019), a cargo de la responsabilidad técnica.</span></div></li>
 <li><span class="yr">2017–2018</span><div><span class="pub-title">Servicios de alto desempeño en un clúster de GPU</span><span class="pub-auth">Arquitectura multi-agente para planificar servicios en un clúster con tarjetas gráficas.</span></div></li>
       </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="juegos" aria-labelledby="h-jue">
+  <div class="wrap">
+    <h2 id="h-jue">Juegos de optimización</h2>
+    <div>
+      <p>Dos problemas difíciles de los que estudio, para que los pruebes. Intenta resolverlos tú primero y después compara tu respuesta con la del algoritmo.</p>
+
+      <article class="game" id="g-tsp" aria-labelledby="h-tsp">
+        <h3 id="h-tsp">La ruta de la bodega</h3>
+        <p>Sales de la bodega, debes pasar por todas las tiendas una sola vez y volver al punto de partida recorriendo la menor distancia posible. Es el problema del agente viajero, que es NP-difícil. Toca las tiendas en el orden que elijas; para deshacer, toca la última tienda de tu ruta.</p>
+        <div class="ctrl">
+          <label class="rng" for="t-n">Tiendas <input type="range" id="t-n" min="5" max="14" value="9"><output id="t-nv" for="t-n">9</output></label>
+          <button type="button" class="gb" id="t-new">Nueva instancia</button>
+          <button type="button" class="gb" id="t-undo">Deshacer</button>
+          <button type="button" class="gb" id="t-reset">Reiniciar ruta</button>
+          <button type="button" class="gb go" id="t-solve">Ver soluciones</button>
+        </div>
+        <svg class="map" id="t-map" viewBox="0 0 560 400" role="group"
+             aria-label="Minimapa con una bodega y varias tiendas numeradas. Elige las tiendas en el orden en que las visitarás."></svg>
+        <p class="status" id="t-status" role="status" aria-live="polite"></p>
+        <div id="t-res" hidden>
+          <div class="tog" id="t-tog" role="group" aria-label="Rutas visibles en el mapa">
+            <span class="lbl">Mostrar:</span>
+            <button type="button" class="chip" data-k="user" aria-pressed="true"><i class="sw" style="background:var(--accent)"></i>Mi ruta</button>
+            <button type="button" class="chip" data-k="opt" aria-pressed="true"><i class="sw" style="background:var(--ink)"></i>Óptima</button>
+            <button type="button" class="chip" data-k="apx" aria-pressed="true"><i class="sw" style="background:var(--gold)"></i>Aproximada</button>
+          </div>
+          <div class="tog" id="t-met" role="group" aria-label="Algoritmo de aproximación">
+            <span class="lbl">Aproximación:</span>
+            <button type="button" class="chip" data-m="nn" aria-pressed="true">Vecino más cercano</button>
+            <button type="button" class="chip" data-m="mst" aria-pressed="false">Árbol de expansión mínima</button>
+          </div>
+          <div class="tw"><table class="cmp">
+            <thead><tr><th scope="col">Ruta</th><th scope="col">Distancia</th><th scope="col">Sobre el óptimo</th></tr></thead>
+            <tbody id="t-rows"></tbody>
+          </table></div>
+          <p class="note" id="t-note"></p>
+        </div>
+      </article>
+
+      <article class="game" id="g-sch" aria-labelledby="h-sch">
+        <h3 id="h-sch">Quirófanos del día</h3>
+        <p>Un hospital tiene varios quirófanos y una lista de cirugías con su duración en horas. Reparte las cirugías para que el último quirófano termine lo antes posible. Es un problema de programación de tareas, de la misma familia de los que aparecen al asignar camas y recursos hospitalarios. Elige una cirugía, toca el quirófano donde la programarás y, para devolverla a la lista, toca su bloque.</p>
+        <div class="ctrl">
+          <label class="rng" for="s-n">Cirugías <input type="range" id="s-n" min="6" max="12" value="9"><output id="s-nv" for="s-n">9</output></label>
+          <label class="rng" for="s-m">Quirófanos
+            <select id="s-m"><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option></select></label>
+          <button type="button" class="gb" id="s-new">Nueva instancia</button>
+          <button type="button" class="gb" id="s-reset">Reiniciar</button>
+          <button type="button" class="gb go" id="s-solve">Ver soluciones</button>
+        </div>
+        <div class="pool" id="s-pool" role="group" aria-label="Cirugías por programar"></div>
+        <div id="s-rooms"></div>
+        <p class="status" id="s-status" role="status" aria-live="polite"></p>
+        <div id="s-res" hidden>
+          <div class="tw"><table class="cmp">
+            <thead><tr><th scope="col">Calendario</th><th scope="col">Termina</th><th scope="col">Sobre el óptimo</th></tr></thead>
+            <tbody id="s-rows"></tbody>
+          </table></div>
+          <p class="note" id="s-note"></p>
+          <div id="s-gantts"></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -524,6 +665,353 @@ footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);f
   }
   document.getElementById('grafo-repetir').addEventListener('click', dibujar);
   dibujar();
+})();
+</script>
+<script>
+/* ================= Juego 1: ruta de la bodega (agente viajero) ================= */
+(function () {
+  var NS = 'http://www.w3.org/2000/svg', W = 560, H = 400, KM = 0.05;
+  var svg = document.getElementById('t-map');
+  var $ = function (id) { return document.getElementById(id); };
+  function se(name, attrs, parent) {
+    var e = document.createElementNS(NS, name);
+    for (var a in attrs) e.setAttribute(a, attrs[a]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  var gLay, gNodes, pts, D, route, sol, vis, method, nodeEls;
+  var km = function (px) { return (px * KM).toFixed(1).replace('.', ',') + ' km'; };
+
+  function fondo() {
+    var g = se('g', { 'aria-hidden': 'true' }, svg);
+    se('rect', { 'class': 'park', x: 238, y: 172, width: 74, height: 58, rx: 10 }, g);
+    [70, 160, 250, 340].forEach(function (y) { se('line', { 'class': 'st', x1: 0, y1: y, x2: W, y2: y, 'stroke-width': 9 }, g); });
+    [90, 200, 330, 450, 520].forEach(function (x) { se('line', { 'class': 'st', x1: x, y1: 0, x2: x, y2: H, 'stroke-width': 9 }, g); });
+    se('path', { 'class': 'st', d: 'M0 385 L560 35', 'stroke-width': 14 }, g);
+    var t = se('text', { 'class': 'cap', x: 10, y: H - 10 }, g); t.textContent = 'Mapa ilustrativo · 1 km = 20 px';
+  }
+
+  function nueva() {
+    var m = +$('t-n').value, sep = 66, tries = 0;
+    pts = [{ x: 150 + Math.random() * 260, y: 110 + Math.random() * 180 }];
+    while (pts.length < m + 1) {
+      var p = { x: 32 + Math.random() * (W - 64), y: 32 + Math.random() * (H - 64) };
+      if (pts.every(function (q) { return Math.hypot(p.x - q.x, p.y - q.y) >= sep; })) pts.push(p);
+      if (++tries % 2500 === 0) sep -= 6;
+    }
+    var n = pts.length;
+    D = pts.map(function (a) { return pts.map(function (b) { return Math.hypot(a.x - b.x, a.y - b.y); }); });
+    route = []; sol = null; vis = { user: true, opt: true, apx: true }; method = 'nn';
+    svg.textContent = ''; fondo();
+    gLay = se('g', {}, svg); gNodes = se('g', {}, svg); nodeEls = [];
+    var d = pts[0];
+    var dep = se('g', { 'class': 'depot', role: 'img', 'aria-label': 'Bodega, punto de partida' }, gNodes);
+    se('path', { d: 'M' + (d.x - 17) + ' ' + (d.y - 2) + 'L' + d.x + ' ' + (d.y - 17) + 'L' + (d.x + 17) + ' ' + (d.y - 2) + 'V' + (d.y + 13) + 'H' + (d.x - 17) + 'Z' }, dep);
+    se('rect', { 'class': 'door', x: d.x - 5, y: d.y + 2, width: 10, height: 11 }, dep);
+    var lt = se('text', { x: d.x, y: d.y + 28 }, dep); lt.textContent = 'Bodega';
+    for (var i = 1; i < n; i++) {
+      var g = se('g', { 'class': 'city', tabindex: 0, role: 'button', 'data-i': i }, gNodes);
+      se('circle', { 'class': 'hit', cx: pts[i].x, cy: pts[i].y, r: 22, fill: 'transparent' }, g);
+      se('circle', { 'class': 'dot', cx: pts[i].x, cy: pts[i].y, r: 14 }, g);
+      var tx = se('text', { x: pts[i].x, y: pts[i].y }, g); tx.textContent = i;
+      nodeEls[i] = g;
+    }
+    $('t-res').hidden = true;
+    actualizar();
+  }
+
+  function tourLen(t) {
+    var s = 0;
+    for (var i = 0; i < t.length; i++) s += D[t[i]][t[(i + 1) % t.length]];
+    return s;
+  }
+
+  /* óptimo: programación dinámica de Held-Karp, O(2^n · n²) */
+  function heldKarp() {
+    var m = pts.length - 1, S = 1 << m;
+    var dp = new Float64Array(S * m).fill(Infinity), par = new Int8Array(S * m).fill(-1);
+    var F = new Float64Array(m * m);
+    for (var x = 0; x < m; x++) for (var y = 0; y < m; y++) F[x * m + y] = D[x + 1][y + 1];
+    for (var j = 0; j < m; j++) dp[(1 << j) * m + j] = D[0][j + 1];
+    for (var mask = 1; mask < S; mask++)
+      for (var a = 0; a < m; a++) {
+        if (!(mask & (1 << a))) continue;
+        var cur = dp[mask * m + a]; if (cur === Infinity) continue;
+        for (var b = 0; b < m; b++) {
+          if (mask & (1 << b)) continue;
+          var ix = (mask | (1 << b)) * m + b, v = cur + F[a * m + b];
+          if (v < dp[ix]) { dp[ix] = v; par[ix] = a; }
+        }
+      }
+    var full = S - 1, best = Infinity, last = -1;
+    for (var k = 0; k < m; k++) { var v2 = dp[full * m + k] + D[k + 1][0]; if (v2 < best) { best = v2; last = k; } }
+    var tour = [], msk = full, c = last;
+    while (c >= 0) { tour.push(c + 1); var pc = par[msk * m + c]; msk ^= (1 << c); c = pc; }
+    return [0].concat(tour.reverse());
+  }
+  /* aproximada 1: vecino más cercano */
+  function vecino() {
+    var n = pts.length, seen = [true], t = [0], cur = 0;
+    for (var k = 1; k < n; k++) {
+      var b = -1;
+      for (var j = 1; j < n; j++) if (!seen[j] && (b < 0 || D[cur][j] < D[cur][b])) b = j;
+      seen[b] = true; t.push(b); cur = b;
+    }
+    return t;
+  }
+  /* aproximada 2: árbol de expansión mínima (Prim) y recorrido en preorden; nunca pasa de 2× el óptimo */
+  function arbol() {
+    var n = pts.length, inT = [], par = [], key = [];
+    for (var i = 0; i < n; i++) { key[i] = Infinity; par[i] = -1; }
+    key[0] = 0;
+    for (var k = 0; k < n; k++) {
+      var u = -1;
+      for (var v = 0; v < n; v++) if (!inT[v] && (u < 0 || key[v] < key[u])) u = v;
+      inT[u] = true;
+      for (var w = 0; w < n; w++) if (!inT[w] && D[u][w] < key[w]) { key[w] = D[u][w]; par[w] = u; }
+    }
+    var ch = pts.map(function () { return []; });
+    for (var x = 1; x < n; x++) ch[par[x]].push(x);
+    var t = [];
+    (function dfs(u) { t.push(u); ch[u].sort(function (a, b) { return D[u][a] - D[u][b]; }).forEach(dfs); })(0);
+    return t;
+  }
+
+  function pl(cls, tour, close) {
+    var s = tour.map(function (i) { return pts[i].x + ',' + pts[i].y; });
+    if (close) s.push(pts[tour[0]].x + ',' + pts[tour[0]].y);
+    se('polyline', { 'class': 'rt ' + cls, points: s.join(' ') }, gLay);
+  }
+
+  function actualizar() {
+    var m = pts.length - 1, done = route.length === m;
+    gLay.textContent = '';
+    if (sol) {
+      if (vis.apx) pl('rt-apx', method === 'nn' ? sol.nn : sol.mst, true);
+      if (vis.opt) pl('rt-opt', sol.opt, true);
+    }
+    if (route.length && (!sol || vis.user)) pl('rt-user', [0].concat(route), done);
+    var last = route[route.length - 1];
+    for (var i = 1; i <= m; i++) {
+      var inR = route.indexOf(i) >= 0;
+      nodeEls[i].setAttribute('class', 'city' + (inR ? ' vis' : '') + (i === last ? ' last' : ''));
+      nodeEls[i].setAttribute('aria-label', 'Tienda ' + i + (inR ? (i === last ? ', última de tu ruta; tocar para quitarla' : ', ya visitada') : ', agregar a la ruta'));
+    }
+    var len = route.length ? tourLen([0].concat(route)) - (done ? 0 : D[last][0]) : 0;
+    var st = $('t-status');
+    if (!route.length) st.textContent = 'Toca una tienda para empezar la ruta desde la bodega.';
+    else if (!done) st.textContent = 'Llevas ' + route.length + ' de ' + m + ' tiendas y ' + km(len) + ' recorridos.';
+    else st.textContent = 'Ruta completa con el regreso a la bodega: ' + km(len) + '. ' + (sol ? '' : 'Pulsa «Ver soluciones» para compararla.');
+    $('t-undo').disabled = !route.length; $('t-reset').disabled = !route.length;
+    tabla();
+  }
+
+  function tabla() {
+    if (!sol) return;
+    var m = pts.length - 1, done = route.length === m;
+    var opt = tourLen(sol.opt), apxT = method === 'nn' ? sol.nn : sol.mst, apx = tourLen(apxT);
+    var u = done ? tourLen([0].concat(route)) : null;
+    function pct(v) { var p = (v / opt - 1) * 100; return p < 0.05 ? 'Óptima' : '+' + p.toFixed(1).replace('.', ',') + ' %'; }
+    var rows = [
+      ['<i class="sw" style="background:var(--accent)"></i>Tu ruta', u === null ? 'incompleta' : km(u), u === null ? '' : pct(u)],
+      ['<i class="sw" style="background:var(--ink)"></i>Óptima', km(opt), 'Óptima'],
+      ['<i class="sw" style="background:var(--gold)"></i>Aproximada', km(apx), pct(apx)]
+    ];
+    $('t-rows').innerHTML = rows.map(function (r) { return '<tr><th scope="row">' + r[0] + '</th><td>' + r[1] + '</td><td>' + r[2] + '</td></tr>'; }).join('');
+    var nota = 'La ruta óptima se calcula con programación dinámica (Held-Karp), que revisa todos los subconjuntos de tiendas en tiempo O(2' + '<sup>n</sup>·n²). ';
+    nota += method === 'nn'
+      ? 'El vecino más cercano siempre va a la tienda más próxima: es muy rápido, pero no tiene una garantía constante y puede quedar lejos del óptimo.'
+      : 'Esta aproximación construye un árbol de expansión mínima (como el de la portada) y lo recorre en preorden saltando tiendas repetidas. Si las distancias cumplen la desigualdad triangular, nunca excede el doble del óptimo.';
+    $('t-note').innerHTML = nota;
+    if (u !== null && Math.abs(u - opt) < 1e-6) $('t-status').textContent = '¡Encontraste una ruta óptima! ' + km(u) + '.';
+    else if (u !== null) $('t-status').textContent = 'Tu ruta mide ' + km(u) + ' y la óptima ' + km(opt) + ' (' + pct(u) + ').';
+  }
+
+  svg.addEventListener('click', function (e) {
+    var g = e.target.closest('.city'); if (!g) return;
+    var i = +g.getAttribute('data-i'), at = route.indexOf(i);
+    if (at === route.length - 1 && at >= 0) route.pop();
+    else if (at < 0) route.push(i);
+    else { $('t-status').textContent = 'La tienda ' + i + ' ya está en tu ruta. Solo puedes quitar la última.'; return; }
+    actualizar(); nodeEls[i].focus();
+  });
+  svg.addEventListener('keydown', function (e) {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.city')) { e.preventDefault(); e.target.closest('.city').dispatchEvent(new MouseEvent('click', { bubbles: true })); }
+  });
+  $('t-undo').addEventListener('click', function () { route.pop(); actualizar(); });
+  $('t-reset').addEventListener('click', function () { route = []; actualizar(); });
+  $('t-new').addEventListener('click', nueva);
+  $('t-n').addEventListener('input', function () { $('t-nv').textContent = this.value; });
+  $('t-n').addEventListener('change', nueva);
+  $('t-solve').addEventListener('click', function () {
+    if (!sol) sol = { opt: heldKarp(), nn: vecino(), mst: arbol() };
+    $('t-res').hidden = false; actualizar();
+    $('t-res').scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  });
+  $('t-tog').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    var k = b.getAttribute('data-k'); vis[k] = !vis[k];
+    b.setAttribute('aria-pressed', vis[k]); actualizar();
+  });
+  $('t-met').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    method = b.getAttribute('data-m');
+    this.querySelectorAll('.chip').forEach(function (c) { c.setAttribute('aria-pressed', c === b); });
+    vis.apx = true; $('t-tog').querySelector('[data-k="apx"]').setAttribute('aria-pressed', 'true');
+    actualizar();
+  });
+  nueva();
+})();
+
+/* ================= Juego 2: quirófanos (minimizar el tiempo total) ================= */
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var L = 'ABCDEFGHIJKL';
+  var st = { p: [], m: 3, assign: [], sel: null, sol: null, shown: false, hbase: 10 };
+  var sum = function (a) { return a.reduce(function (s, x) { return s + x; }, 0); };
+
+  /* voraz: la cirugía más larga primero, en el quirófano menos cargado (LPT) */
+  function lpt(p, m) {
+    var idx = p.map(function (_, i) { return i; }).sort(function (a, b) { return p[b] - p[a] || a - b; });
+    var A = [], ld = [], i;
+    for (i = 0; i < m; i++) { A.push([]); ld.push(0); }
+    idx.forEach(function (j) {
+      var k = 0; for (i = 1; i < m; i++) if (ld[i] < ld[k]) k = i;
+      A[k].push(j); ld[k] += p[j];
+    });
+    return { assign: A, cmax: Math.max.apply(null, ld) };
+  }
+  /* óptimo: búsqueda exhaustiva con poda, rompiendo simetrías */
+  function optimo(p, m) {
+    var idx = p.map(function (_, i) { return i; }).sort(function (a, b) { return p[b] - p[a] || a - b; });
+    var g = lpt(p, m), best = g.cmax, bestA = g.assign.map(function (a) { return a.slice(); });
+    var lb = Math.max(Math.ceil(sum(p) / m), Math.max.apply(null, p));
+    var ld = [], cur = [], i;
+    for (i = 0; i < m; i++) { ld.push(0); cur.push([]); }
+    (function dfs(t) {
+      if (best <= lb) return;
+      if (t === idx.length) {
+        var c = Math.max.apply(null, ld);
+        if (c < best) { best = c; bestA = cur.map(function (a) { return a.slice(); }); }
+        return;
+      }
+      var j = idx[t], seen = {};
+      for (var r = 0; r < m; r++) {
+        if (seen[ld[r]] || ld[r] + p[j] >= best) continue;
+        seen[ld[r]] = 1;
+        ld[r] += p[j]; cur[r].push(j);
+        dfs(t + 1);
+        cur[r].pop(); ld[r] -= p[j];
+      }
+    })(0);
+    return { assign: bestA, cmax: best, lb: lb };
+  }
+
+  function nueva() {
+    var n = +$('s-n').value, m = +$('s-m').value, p, o, g, tries = 0;
+    do {
+      p = []; for (var i = 0; i < n; i++) p.push(2 + Math.floor(Math.random() * 8));
+      g = lpt(p, m); o = optimo(p, m);
+    } while (g.cmax === o.cmax && ++tries < 40);
+    st.p = p; st.m = m; st.sol = { opt: o, lpt: g };
+    st.hbase = Math.ceil(sum(p) / m) + Math.max.apply(null, p) + 1;
+    reiniciar();
+  }
+  function reiniciar() {
+    st.assign = []; for (var r = 0; r < st.m; r++) st.assign.push([]);
+    st.sel = null; st.shown = false; $('s-res').hidden = true;
+    render();
+  }
+  function cmax(A) { return Math.max.apply(null, A.map(function (a) { return sum(a.map(function (j) { return st.p[j]; })); })); }
+
+  function laneHTML(A, r, interactive, H) {
+    var ld = sum(A[r].map(function (j) { return st.p[j]; }));
+    var blocks = A[r].map(function (j) {
+      var lab = 'Cirugía ' + L[j] + ', ' + st.p[j] + ' h';
+      return interactive
+        ? '<button type="button" class="blk" data-j="' + j + '" style="--p:' + st.p[j] + '" aria-label="' + lab + '. Devolver a la lista">' + L[j] + '<small>' + st.p[j] + '</small></button>'
+        : '<span class="blk" style="--p:' + st.p[j] + '" role="img" aria-label="' + lab + '">' + L[j] + '<small>' + st.p[j] + '</small></span>';
+    }).join('');
+    return { ld: ld, html: blocks };
+  }
+  function roomsHTML(A, interactive, H, cm) {
+    var out = '';
+    for (var r = 0; r < A.length; r++) {
+      var l = laneHTML(A, r, interactive, H);
+      out += '<div class="room"><div class="room-h"><span>Quirófano ' + (r + 1) + '</span><span><span class="load">' + l.ld + ' h</span>' +
+        (interactive ? ' <button type="button" class="gb put" data-r="' + r + '"' + (st.sel === null ? ' disabled' : '') + '>Colocar aquí</button>' : '') +
+        '</span></div><div class="lane' + (interactive && st.sel !== null ? ' target' : '') + '" data-r="' + r + '">' + l.html +
+        (cm > 0 ? '<i class="cmax" style="--c:' + cm + '"></i>' : '') + '</div></div>';
+    }
+    return out;
+  }
+
+  function render() {
+    var A = st.assign, placed = {};
+    A.forEach(function (a) { a.forEach(function (j) { placed[j] = 1; }); });
+    var cm = cmax(A), H = Math.max(st.hbase, cm + 1);
+    var pool = $('s-pool'), rooms = $('s-rooms');
+    pool.style.setProperty('--u', (100 / H) + '%'); rooms.style.setProperty('--u', (100 / H) + '%');
+    var pend = st.p.map(function (_, j) { return j; }).filter(function (j) { return !placed[j]; });
+    pool.innerHTML = pend.length ? pend.map(function (j) {
+      return '<button type="button" class="job" data-j="' + j + '" aria-pressed="' + (st.sel === j) + '" aria-label="Cirugía ' + L[j] + ', ' + st.p[j] + ' horas">' + L[j] + '<small>' + st.p[j] + ' h</small></button>';
+    }).join('') : '<span class="none">Ya programaste todas las cirugías.</span>';
+    rooms.innerHTML = roomsHTML(A, true, H, cm);
+    var s = $('s-status'), n = st.p.length, k = n - pend.length;
+    if (st.sel !== null) s.textContent = 'Cirugía ' + L[st.sel] + ' (' + st.p[st.sel] + ' h) elegida. Toca el quirófano donde la programarás.';
+    else if (!k) s.textContent = 'Elige una cirugía de la lista y después el quirófano donde la programarás.';
+    else if (pend.length) s.textContent = 'Llevas ' + k + ' de ' + n + ' cirugías. El quirófano más ocupado termina a las ' + cm + ' h.';
+    else s.textContent = 'Calendario completo: el último quirófano termina a las ' + cm + ' h.' + (st.shown ? '' : ' Pulsa «Ver soluciones» para compararlo.');
+    if (st.shown) resultados(pend.length === 0, cm);
+  }
+
+  function resultados(done, cm) {
+    var o = st.sol.opt, g = st.sol.lpt;
+    function pct(v) { return v === o.cmax ? 'Óptimo' : '+' + ((v / o.cmax - 1) * 100).toFixed(1).replace('.', ',') + ' %'; }
+    var sw = function (c) { return '<i class="sw" style="background:' + c + '"></i>'; };
+    $('s-rows').innerHTML =
+      '<tr><th scope="row">' + sw('var(--accent)') + 'Tu calendario</th><td>' + (done ? cm + ' h' : 'incompleto') + '</td><td>' + (done ? pct(cm) : '') + '</td></tr>' +
+      '<tr><th scope="row">' + sw('var(--ink)') + 'Óptimo</th><td>' + o.cmax + ' h</td><td>Óptimo</td></tr>' +
+      '<tr><th scope="row">' + sw('var(--gold)') + 'Voraz (LPT)</th><td>' + g.cmax + ' h</td><td>' + pct(g.cmax) + '</td></tr>';
+    var nota = 'Ningún calendario puede terminar antes de ' + o.lb + ' h (el trabajo total entre los quirófanos, redondeado hacia arriba, o la cirugía más larga). ';
+    nota += o.cmax === o.lb ? 'Aquí el óptimo alcanza esa cota. ' : 'Aquí el óptimo queda en ' + o.cmax + ' h. ';
+    nota += g.cmax === o.cmax ? 'El algoritmo voraz también dio con el óptimo.' : 'El algoritmo voraz asigna la cirugía más larga al quirófano menos cargado y es instantáneo, pero aquí se queda en ' + g.cmax + ' h. Se sabe que nunca excede 4/3 del óptimo.';
+    $('s-note').textContent = nota;
+    var H = Math.max(st.hbase, cm + 1, g.cmax + 1);
+    var gantt = function (title, A, c) { return '<div class="gantt" style="--u:' + (100 / H) + '%"><h4>' + title + '</h4>' + roomsHTML(A, false, H, c) + '</div>'; };
+    $('s-gantts').innerHTML =
+      (done ? gantt('Tu calendario · ' + cm + ' h', st.assign, cm) : '') +
+      gantt('Óptimo · ' + o.cmax + ' h', o.assign, o.cmax) +
+      gantt('Voraz (LPT) · ' + g.cmax + ' h', g.assign, g.cmax);
+    $('s-res').hidden = false;
+  }
+
+  $('s-pool').addEventListener('click', function (e) {
+    var b = e.target.closest('.job'); if (!b) return;
+    var j = +b.getAttribute('data-j'); st.sel = st.sel === j ? null : j; render();
+    var nb = $('s-pool').querySelector('[data-j="' + j + '"]'); if (nb) nb.focus();
+  });
+  $('s-rooms').addEventListener('click', function (e) {
+    var blk = e.target.closest('.blk');
+    if (blk) {
+      var j = +blk.getAttribute('data-j');
+      st.assign.forEach(function (a) { var k = a.indexOf(j); if (k >= 0) a.splice(k, 1); });
+      st.sel = null; render();
+      var nb = $('s-pool').querySelector('[data-j="' + j + '"]'); if (nb) nb.focus();
+      return;
+    }
+    var t = e.target.closest('[data-r]'); if (!t) return;
+    if (st.sel === null) { $('s-status').textContent = 'Primero elige una cirugía de la lista.'; return; }
+    var r = +t.getAttribute('data-r'); st.assign[r].push(st.sel); st.sel = null; render();
+    var pb = $('s-rooms').querySelector('.put[data-r="' + r + '"]'); if (pb) pb.focus();
+  });
+  $('s-new').addEventListener('click', nueva);
+  $('s-reset').addEventListener('click', reiniciar);
+  $('s-n').addEventListener('input', function () { $('s-nv').textContent = this.value; });
+  $('s-n').addEventListener('change', nueva);
+  $('s-m').addEventListener('change', nueva);
+  $('s-solve').addEventListener('click', function () { st.shown = true; render(); $('s-res').scrollIntoView({ block: 'nearest', behavior: 'smooth' }); });
+  nueva();
 })();
 </script>
 </body>
